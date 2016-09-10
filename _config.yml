@@ -1,0 +1,29 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+excerpt_separator: "<!-- more -->" # Adds read more feature
+# Setup
+title:               Random Walk
+tagline:             ''
+description:         ''
+home:                http://rohitghosh.github.io
+url:                 http://rohitghosh.github.io/randomwalk
+baseurl:             /randomwalk/
+paginate:            5
+paginate_path:       "/page:num/"
+exclude:             ['posts']
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Rohit Ghosh
+  url:               https://rohitghosh.github.io/
+  email:             rohitghosh177@gmail.com
