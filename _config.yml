@@ -1,19 +1,20 @@
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-#relative_permalinks: true
-excerpt_separator: "<!-- more -->" # Adds read more feature
+
 # Setup
 title:               Random Walk
 tagline:             ''
 description:         ''
-#home:                http://rohitghosh.github.io
-url:                 http://rohitghosh.github.io/
-baseurl:             /
+home:                http://rohitghosh.github.io
+url:                 http://rohitghosh.github.io/blog
+baseurl:             /blog
 paginate:            5
 paginate_path:       "/page:num/"
 exclude:             ['posts']
+pages_list:
+  About: '/blog/about'
+  Archive: '/blog/archive'
+  Feed: '/atom.xml'
 
 # Assets
 #
@@ -27,3 +28,13 @@ author:
   name:              Rohit Ghosh
   url:               https://rohitghosh.github.io/
   email:             rohitghosh177@gmail.com
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
