@@ -9,8 +9,8 @@ title:               Random Walk
 tagline:             ''
 description:         ''
 home:                http://rohitghosh.github.io
-url:                 http://rohitghosh.github.io/randomwalk
-baseurl:             /randomwalk/
+url:                 http://rohitghosh.github.io/
+baseurl:             /
 paginate:            5
 paginate_path:       "/page:num/"
 exclude:             ['posts']
