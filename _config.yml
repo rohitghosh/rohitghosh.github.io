@@ -8,7 +8,7 @@ excerpt_separator: "<!-- more -->" # Adds read more feature
 title:               Random Walk
 tagline:             ''
 description:         ''
-home:                http://rohitghosh.github.io
+#home:                http://rohitghosh.github.io
 url:                 http://rohitghosh.github.io/
 baseurl:             /
 paginate:            5
