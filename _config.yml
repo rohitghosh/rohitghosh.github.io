@@ -5,16 +5,21 @@ permalink:           pretty
 title:               Random Walk
 tagline:             ''
 description:         ''
-home:                http://rohitghosh.github.io
-url:                 http://rohitghosh.github.io/blog
-baseurl:             /blog
+# home:                http://rohitghosh.github.io
+url:                 http://rohitghosh.github.io/
+baseurl:             ""
 paginate:            5
 paginate_path:       "/page:num/"
 exclude:             ['posts']
 pages_list:
-  About: '/blog/about'
-  Archive: '/blog/archive'
+  About: '/about'
+  Archive: '/archive'
   Feed: '/atom.xml'
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
 
 # Assets
 #
