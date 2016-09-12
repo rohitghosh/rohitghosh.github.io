@@ -3,28 +3,8 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Rohit here. Currently, working as <strong>Deep Learning Scientist</strong> at [qure.ai](https://blog.qure.ai). We are working on bio-medical imaging problems - mostly pathology and radiolgy problems, using Deep Learning in Computer Vision for early-stage diagnosis.
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+A 2014 grad from IIT-Bombay, ex-investment banker who sold his 'ferrari' to fund his startup. And then, in search of true 'nirvana' in form of truly impacting disruption, finally found my way to Qure. Before Qure, I had worked as Data Scientist for [ListUp](http://listup.co.in/), a P2P buy-sell platform and as Freelance Data Scientist for New York based startup [Data Science Labs](https://datascilabs.com/) and couple of other startups.
 
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Apart from Deep Learning, I also keenly follow (at least like to follow) developments in Reinforcement Learning. Also, on weekends, I am mostly playing either playing tennis or at swimming pool. An avid hopelessly Hindi music buff, I like to read a lot on varied topics, and keep a tab on the newest breakthroughs in the startup scenario.  Hence, a varied lot of topics in the [blog](https://rohitghosh.github.io/).

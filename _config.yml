@@ -3,9 +3,9 @@ permalink:           pretty
 excerpt_separator: "<!--more-->"
 
 # Setup
-title:               Random Walk
-tagline:             ''
-description:         ''
+title:               Iota
+tagline:             'Imaginary Reality'
+description:         'A peek into the nuances of Deep Learning & other imaginary concepts'
 # home:                http://rohitghosh.github.io
 url:                 http://rohitghosh.github.io/
 baseurl:             ""
