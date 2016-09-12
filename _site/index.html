@@ -54,6 +54,189 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="//2016/09/05/AI-beyond-buzzwords/">
+        AI - Beyond Buzzwords & Comparisons To Human Abilities
+      </a>
+    </h1>
+
+    <span class="post-date">05 Sep 2016</span>
+
+    <p>Any heated argument on AI these days soon ends up in a predictable trajectory - so DeepMind’s AlphaGo beats Go champ, Tesla to compete with Uber using AI driven cars, ethical dilemma of driver-less cars and finally - would robots overpower humankind (on sidelines of the last debate would be venue of the Matrix themed D-Day - Earth or Mars !)</p>
+
+<p>So if you’re writing a sci-fi book or you’re a tarot-reader then don’t bother to read further.
+But, if you’re reading buzzwords everyday and wondering what’s AI, what’s the big deal about it and where we stand as of today compared to human-like capabilities of AI; may be give the post a read.</p>
+
+<h3 id="what-is-ai--what-is-not-">What is AI &amp; what is not ?</h3>
+
+<p>AI, coined in 1956 at University of DartMouth by psychologist Rosenblatt,
+was defined vaguely as a field aimed to make machines do the same work as humans.
+In the years to follow, conventional Machine Learning (ML) algorithms became norm of the day in AI till
+something strangely powerful happened in 2012. This was the ImageNet (an image recognition competition)
+breakthrough by Prof. Hinton (in Google now) and his students based on Le Net, a Convolutional Net originally
+designed by Le Cunn (in FB now), the-then prof at NYU.
+This breakthrough was strange cause till then Convolutional Nets (CNNs) had hardly shown any usefulness
+beyond hand-written character recognition (here’s a <a href="https://www.youtube.com/watch?v=FwFduRA_L6Q">video</a> on Le Cunn training CNN
+back in ‘93 at Bell Labs) and yet it was powerful  as it  entailed an explosion in AI over
+the coming years in ways people in academia and industry had hardly foreseen. See the figure below.
+<img src="/images/newplot.png" alt="NIPS &amp; ICML Papers submitted" title="NIPS &amp; ICML Papers submitted" /></p>
+
+<p>To put it simply, AI agents learn from data, preferably huge amounts of data - instead of programmer himself hard-coding and modelling reactions to various use cases. The idea is</p>
+
+<blockquote>
+  <p>Don’t model the World but model the Brain and only then let the modelled Brain learn.</p>
+</blockquote>
+
+<p>Modelled after brain, in it’s simplest avatar, a net essentially consists of a graph of nodes which processes input sequentially. By ‘processing’ I meant multiplying output from previous node by a weight matrix and applying non-linearity to the product. Learning the weight matrices is the whole game !</p>
+
+<p>Also, it’s not data mining where the pattern is mined from data and then requisite changes are made in the algorithm as per observed pattern. AI is more end-to-end. So when I see a lot of startups using smart but hard-coded logic based algorithms (based on data or otherwise) under alias of AI, I feel it’s gravely misleading.</p>
+
+<h3 id="why-the-hype-around-ai-this-time-around-">Why the hype around AI this time around ?</h3>
+
+<p>Interestingly, after perceptrons were introduced in 1956, it was followed by immense hype regarding it’s capabilities, sort of what we see around AI now. And sadly, there was a lot of disappointment that followed it. In fact, there were couple of AI winters in the intermediate years. (‘74-‘80 &amp; ‘87-‘93)</p>
+
+<p>The reasons, both time around, were lack of computational power, coupled with cuts in funding because of economic crashes. Post ’93 even though it regained some lost ground following Le Cunn’s success in handwritten digit recognition, it wasn’t until 2012 that using nets became mainstream, again.</p>
+
+<h4 id="so-whats-happening-right-this-time-around-">So what’s happening right this time around ?</h4>
+
+<p>The nets that were hardly 10 layers deep pre-2012, can now reach 1000 layers easily without much trouble in training. Deeper nets kicked off the field of Deep Learning - the deeper the nets, the better the results tend to be in general. The reasons are majorly -</p>
+
+<ul>
+  <li><em>Higher computational powers</em>: The computational gains because of advent of GPU and parallelised computation was a major force behind the boom of AI this time. In fact, parallelised computation was the recipe for Prof. Hinton’s Image Net success in 2012.</li>
+  <li><em>Data, enormous data</em>: Most importantly, the sole reason AI has seen success beyond expectations has been availability of data - something that could’ve only happened in post-internet, post-Google &amp; post-FB era.</li>
+  <li><em>Funding</em>: Apart from the above reasons, the amount of money that has been flowing intp AI in the current boom has been phenomenal- the funding for AI based startups has been pegged somewhere at $310mn for the year 2015.
+<img src="/images/AI_quarterly_finance_20160203.jpg" alt="Funding in AI Space" /></li>
+</ul>
+
+<h3 id="what-ai-can-and-what-it-cant">What AI can and what it can’t</h3>
+
+<p>Apparently, AI is pretty good when it comes to visual recognition tasks - take for example - a net that <a href="http://cs231n.stanford.edu/reports2016/022_Report.pdf">detects sentiment from facial expression</a> (the GIF below, taken from YouTube video demo of HappyNet) or one that can do  stuff such as- make any <a href="http://sites.skoltech.ru/compvision/projects/deepwarp/">celeb gaze whichever way you like</a></p>
+
+<p>So when it comes to comparing with human performance in Computer Vision (object detection from images), AI has been able to recognise with 6.8 % error central objects in images compared to humans (the human being researcher Andrej Karapathy himself) with 5.1 % error. When it comes to semantically segmenting out objects from images, recent breakthroughs such as U-Nets are showing some great potential but they involve a lot of supervision costs (i.e. pixel-by-pixel labelling) except this very <a href="https://arxiv.org/abs/1506.02106">recent paper</a> by Stanford Prof. Li Fei-Fei. Even though from advent of AI-driven cars, it could seem that AI has conquered computer vision, but it is very far from over. In fact, there are <a href="http://arxiv.org/pdf/1606.03556v2.pdf">papers</a> which prove that machines see quite differently from human beings.</p>
+
+<p>In speech recognition as well, AI has been pretty good (with less than 8% error on vocabulary consisting of all alphabets and numbers). AI has been exceptional at playing strategy games such as Chess, AlphaGo. Also, at <a href="http://blog.qure.ai/">Qure</a>, we can see AI performing better than some physicians on medical diagnosis, something also <a href="http://www.wired.co.uk/article/ibm-watson-medical-doctor">reported by IBM’s Watson</a> as the underlying tasks involve visual recognition and segmentation tasks at their core.</p>
+
+<p>Even AI is able to <a href="http://deepdreamgenerator.com/">dream</a> and generate images on its own - in a sense it can develop a sense of creativity - through a technique known as <strong>adversial training</strong>. Though it’s not like the creativity we have - to think about objects that never existed. The kind of creativity that AI displays is on the lines of being able to predict a picture correctly when the picture’s central part is cropped, after obviously having seen similar images during training.</p>
+
+<p>But when it comes to basic comprehension tasks like bAbI tasks or MC Tests- answering based on comprehensions like -  “Sandra travelled to the office.Sandra went to the bathroom. Where is Sandra? “ AI still lags behind (around ~60% accuracy without supervision, that is when the AI isn’t supplied with any info on where in the comprehension to look for answer vs ~70% accuracy when it’s provided with the cues). Also, when it comes to answer questions based on picture, or  word-sense disambiguation or Named Entity Recognition ( recognising from “Jack was playing tennis yesterday” - that Jack is a person, tennis is a sport and yesterday is time) AI has not been anywhere close to human level accuracy.</p>
+
+<h2 id="concluding-thoughts">Concluding thoughts</h2>
+
+<p>So that was AI-101, with a peek into world of AI and the truth behind it. So while AI can generate some music, predict the <a href="http://www.mirror.co.uk/tech/meet-artificial-intelligence-knows-whos-7806263">next person dying on popular TV series GoT</a>, save the <a href="http://www.huffingtonpost.in/entry/detecting-ignition-of-wildfires-sooner_b_8028786">world from wildfire</a>, <a href="http://www.geekwire.com/2016/patook-llc/">detect flirting from chats</a> - but currently it has got some serious limitations as well. Well, Artificial Narrow Intelligence (ANI) , Artificial General Intelligence (AGI) &amp; Artificial Super Intelligence (ASI) may be good for hypothetical discussions, in reality it’s probably far-fetched as of today. The boom in AI is real for sure, but the hysteria around AI not so much. And this is something important to remember because the first AI winter was a result of the immense hysteria around perceptrons followed by huge disappointment. If we want to avoid something similar this time, then all of us - researchers, practitioners, investors etc.- need to have realistic expectations in line with current state-of-art research. Obviously, AGI is not impossible in long run given the way things are changing everyday, but if you’re fearing a robot takeover soon or betting your money on AGI taking over on chat bots, it may be a good idea to just sit back and think again.</p>
+
+<p><strong>P.S.</strong> : If you are a Deep Learning Scientist reading this, and are interested for a challenging as well as impacting role at qure.ai , write to us quickly.</p>
+
+<p>If you’re a startup founder reading this and need help in brainstorming the right AI path for your startup given current advances, feel free to contact me. More than happy to help !</p>
+
+<p><strong>P.P.S.</strong> : All the opinions expressed above are my personal opinions, and don’t reflect by any means opinion of Qure or any other firm mentioned above.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//2016/03/15/solving-for-X-in-Tinder-for-X/">
+        Why Tinder works? Solving for X in Tinder for X (Part 2/2)
+      </a>
+    </h1>
+
+    <span class="post-date">15 Mar 2016</span>
+
+    <p>In <a href="https://www.linkedin.com/pulse/why-tinder-works-insights-how-build-addictive-products-nivedan-rathi">Part 1</a>, we delved into the user psychology of what makes Tinder such an addictive product and what are its takeaways for your business idea in general. We’ve all heard a lot about the Uber for X model now, where X has been abused and overused a lot (2016 is an especially interesting time for these startups). Let’s talk about the other cool thing - Tinder for X. So we ventured out to find what makes or break a Tinder for X model where X could be different industries like recruitment, shopping etc.</p>
+
+<p>Let’s begin with all the major criteria for any business problem to be suited for Tinder for X model</p>
+
+<ul>
+  <li>Should connect 2 communities who need each other</li>
+  <li>Availability of almost infinite options to swipe for both communities</li>
+  <li>Any wrong decisions should have little downside</li>
+  <li>Snap judgement to proceed to the next meaningful step should be possible</li>
+  <li>Very little but highly significant information must be presented</li>
+  <li>Choices should be ideally binary &amp; execution virtually zero effort (Tinder-swipe)</li>
+  <li>Should offer variability in rewards</li>
+  <li>Should trigger the emotion of ego boost from a “match”</li>
+</ul>
+
+<p>Now, let’s look at some of the Tinder for X model, solving for X we get</p>
+
+<dl>
+<dt>X = Employer / Job-seeker | Major Apps : Super(India), Jobr</dt>
+
+<dd>Looking for jobs had been made easier over the years but a Tinder-like model beats everyone in engagement. There are endless startup jobs &amp; an equal number of young grads on the app validate the effectiveness and need of the idea. Obviously, there’s also an ‘ego boost’ for an employee, as well as for the employer to some extent, whenever there’s a ‘match’.
+
+However, it’s not a snap judgement for neither the employer nor the employee - it definitely takes second thoughts unless of course you’re in your notice period or the appraisal you’ve been waiting desperately for 2 years just went to someone else in the organisation. Moreover, the lack of Job Description only adds to the trouble. Also, for an employee, there’s definitely a lot of financial downside to a left swipe - that could mean a family holiday at Mauritius being just (s)wiped away!</dd>
+
+<dt>X = Entrepreneur / Investor | Major Apps : Tendr , PIF</dt>
+
+<dd>For investors sifting through a heap of startups daily, these apps are definitely a need of the hour for the investor community. Also, these apps levels field for ‘techie’ founders with limited networks. Obviously, the ‘ego boost’ exists predominantly for an entrepreneur whenever he gets a ‘right’ swipe from an investor.
+
+Again, it would never be a snap judgement. Judging business potential isn’t as cognitive as judging people for hook-up, even for a seasoned investor. Forget business potential, even a beauty pageant where the sole job was to judge beauty by gazing- they ended up asking GK questions.
+
+Also, an endless supply of investors would be tough. However, can’t comment same about no. of entrepreneurs in India these days. It’s only time till the Vijay Mallya raises investment for bail as well. Moreover, a high probability of financial downside for missing out a potential business idea for an investor makes snap judgement even harder.</dd>
+
+<dt>X = Online shopper / online store | Major Apps: Mallzee. Hit or Miss</dt>
+
+<dd>Definitely a must-have app for an ever deal-hungry consumer - what better than looking through an endless stack and dismissing based on % of discount. Given these days of deep-discounted customer acquisition strategy, judging based on discount is more cognitive than judging strangers.
+
+However, this idea fails miserably on the ‘ego boost’ front. A store would never swipe left a customer, so basically it’s never a ‘match’ in the truest sense. Given a customer knows that he would always be swiped right, there’s no thrill or as such ‘variable reward’ (check the Part 1 for details)</dd>
+
+<dt>X = News/ Home-hunt/ Food | Major Apps : InShorts, HomeSwipe, Nibbly</dt>
+
+<dd>Let’s be clear at the outset, an app that gives you summarised news or affordable homes or delicious food doesn’t qualify, as we are talking about Tinder for X model. Sadly only if a news or a house or a biriyani could swipe you right and give you that ego boost then we were done here.
+
+The lack of ‘variable rewards’ &amp; ‘ego boost’ makes this model not so attractive. It’s clearly a case of wrong nomenclature when someone calls something like ‘News In Shorts’ a Tinder for X model.</dd>
+
+</dl>
+
+<p>To conclude, all these are frankly our opinions &amp; judgements, backed by data. Any reference to any startups living or shut down are completely intentional but not ill-intended at all.</p>
+
+<p>We feel that any product could be tweaked to be awesome, not necessarily in Tinder model.  Please feel free to contact us - me &amp; my co-author Nivedan in case you’re facing any challenge with your cool product and we can help you with designing a product strategy to make it even more awesome.</p>
+
+<p>We would love to know more from you about what you think are the reasons for the success of Tinder and similar products. Also, any other A for B models would be a great topic to discuss.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//2016/02/09/starting-to-code/">
+        So, can coding be a lot easier ?
+      </a>
+    </h1>
+
+    <span class="post-date">09 Feb 2016</span>
+
+    <p>So most of us have had our share of interactions with developers, in some way or the other.
+Luckily enough I have now been on both sides - and frankly the experience of creating things from scratch  as a developer has been overwhelming.
+But then not being a <cite>‘techie’</cite> from Day One has left me pondering with certain things, and in this “Hello World” of LinkedIn Posts, I take up one of them.</p>
+
+<p>The best part of my <em>tech-yatra</em> has been the discovery that there’s a a very strong &amp; active community around  development and StackOverflow is undoubtedly the best.
+The support and exhaustiveness of the community is widespread which definitely helps.
+But, as a rookie developer, 4 months ago, I was really torn apart in finding out relevant questions on StackOverflow, reading the top voted answers and then reading documentations as well whenever I faced an error statement.
+To add to my woes, not all solutions were customised as per my requirement !</p>
+
+<p>Now, obviously there’s a joy in learning non-linearly, figuring out things as we go but sometimes these ‘blocks’can be dangerous.
+In fact, while at IIT, a major reason I discontinued coding was partially because of these ‘blocks’.
+As Mihaly Csikszentmihalyi, the pioneer of the concept of ‘Flow’ and author of the book by same name ( a highly recommended read for all ) explains from the figure below, our challenges  need to be proportionate to our skill level for our continuous progress  - otherwise we often get stuck up in anxiety zones  with tough problems and we never progress onto the next level.
+So, if the plan is to be on a steep learning curve or learn within limited time  (say, over weekends where you can’t waste time getting stuck up and lose inspiration to progress),  is there a solution to do programming an easier way ? Not so easy that it becomes boring but easy enough to be in ‘flow’.</p>
+
+<p><img src="/images/Introduction.jpg" alt="placeholder" /></p>
+
+<p>What if those guys who answer your questions on StackOverflow or people like them could answer your questions personally  and instantaneously ?
+What if those moments of anxiety caused by getting stuck can be overcome easily with the help from experts who have relevant credible experience in that language/software/ framework  ?
+Not an online tutor  (cause that pushes coding  into ‘boring’ zone ), but a chat-based assistant whom you could delegate the task of “StackOverflow”ing  things and helping you ASAP only when you’re stuck in a problem.
+And by virtue of their own expertise in the language coupled with past experience of handling similar problems from other users, the help would arrive an user’s way far more earlier than their own efforts would have !</p>
+
+<p>I would love to know your opinion, especially more if you’re starting out as a developer and otherwise also,
+as to whether you would like to use a similar help at a monetary cost of say, less than 1k/year  and how badly would you need it for whatever reasons may be -
+web, app, software development or data science applications, machine learning applications etc.</p>
+
+<p>Would love to hear your opinion and feel free to contact me if this sounds interesting !</p>
+
+<p>P.S. : Just to give a context of areas where I faced challenges, in past 4 months :  I was involved  extensively into building Machine Learning algorithms in fields of NLP, predictive analytics
+while building a small Android application on the side. Currently, though I have been figuring out things on applications of  NLG and block-chain technology.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="//2016/01/03/introduction/">
         Introduction
       </a>
@@ -301,30 +484,11 @@
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="//2016/01/01/whats-jekyll/">
-        What's Jekyll?
-      </a>
-    </h1>
-
-    <span class="post-date">01 Jan 2016</span>
-
-    <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/jekyll/jekyll/blob/master/README.markdown">the project’s readme</a>:</p>
-
-<blockquote>
-  <p>Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
-
-<p>It’s an immensely useful tool. Find out more by <a href="https://github.com/jekyll/jekyll">visiting the project on GitHub</a>.</p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page2">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>
@@ -337,6 +501,57 @@
   
   <article class="post">
     <h1 class="post-title">
+      <a href="/2016/09/05/AI-beyond-buzzwords/">
+        AI - Beyond Buzzwords & Comparisons To Human Abilities
+      </a>
+    </h1>
+
+    <time datetime="2016-09-05T00:00:00+05:30" class="post-date">05 Sep 2016</time>
+
+    Any heated argument on AI these days soon ends up in a predictable trajectory - so DeepMind's AlphaGo beats Go champ,Tesla to compete with Uber using AI driven cars, ethical dilemma of driver-less cars and finally - would robots overpower humankind (on sidelines of the last debate would be venue of the Matrix themed D-Day - Earth or Mars !)...if you’re reading buzzwords everyday and wondering what's AI, what's the big deal about it and where we stand as of today compared to human-like capabilities of AI
+
+    
+     <a href="/2016/09/05/AI-beyond-buzzwords/">Read more</a>
+   
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/2016/03/15/solving-for-X-in-Tinder-for-X/">
+        Why Tinder works? Solving for X in Tinder for X (Part 2/2)
+      </a>
+    </h1>
+
+    <time datetime="2016-03-15T00:00:00+05:30" class="post-date">15 Mar 2016</time>
+
+    In Part 1, we delved into the user psychology of what makes Tinder such an addictive product and what are its takeaways for your business idea in general... So we ventured out to find what makes or break a Tinder for X model where X could be different industries like recruitment, shopping etc.
+
+    
+     <a href="/2016/03/15/solving-for-X-in-Tinder-for-X/">Read more</a>
+   
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/2016/02/09/starting-to-code/">
+        So, can coding be a lot easier ?
+      </a>
+    </h1>
+
+    <time datetime="2016-02-09T00:00:00+05:30" class="post-date">09 Feb 2016</time>
+
+    So most of us have had our share of interactions with developers, in some way or the other.Luckily enough I have now been on both sides - and frankly the experience of creating things from scratch  as a developer has been overwhelming. But then not being a 'techie' from Day One has left me pondering with certain things, and in this "Hello World" of LinkedIn Posts, I take up one of them.
+
+    
+     <a href="/2016/02/09/starting-to-code/">Read more</a>
+   
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
       <a href="/2016/01/03/introduction/">
         Introduction
       </a>
@@ -344,46 +559,11 @@
 
     <time datetime="2016-01-03T00:00:00+05:30" class="post-date">03 Jan 2016</time>
 
-    <p><em>The Strange Case of Dr. Jekyll and Mr. Hyde</em> tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel’s supporting cast is a man by the name of Mr. Poole, Dr. Jekyll’s loyal butler.</p>
+    The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler.
 
-<hr />
-
-<p>Poole is the butler for <a href="http://jekyllrb.com">Jekyll</a>, the static site generator. It’s designed and developed by <a href="https://twitter.com/mdo">@mdo</a> to provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.</p>
-
-<p>There are currently three themes built on Poole:</p>
-
-<ul>
-  <li><a href="http://hyde.getpoole.com">Hyde</a></li>
-  <li><a href="http://lanyon.getpoole.com">Lanyon</a></li>
-  <li><a href="http://enfield.getpoole.com">Enfield</a></li>
-</ul>
-
-<p>Learn more and contribute on <a href="https://github.com/poole/poole">GitHub</a>.</p>
-
-<h3 id="whats-included">What’s included</h3>
-
-<p>Poole is a streamlined Jekyll site designed and built as a foundation for building more meaningful themes. Poole, and every theme built on it like this one, includes the following:</p>
-
-<ul>
-  <li>Complete Jekyll setup included (layouts, config, <a href="/404.html">404</a>, <a href="/atom.xml">RSS feed</a>, posts, and <a href="/about">example page</a>)</li>
-  <li>Mobile friendly design and development</li>
-  <li>Easily scalable text and component sizing with <code class="highlighter-rouge">rem</code> units in the CSS</li>
-  <li>Support for a wide gamut of HTML elements</li>
-  <li>Related posts (time-based, because Jekyll) below each post</li>
-  <li>Syntax highlighting, courtesy Jekyll’s built-in support for Rouge</li>
-</ul>
-
-<p>Additional features are available in individual themes.</p>
-
-<h3 id="browser-support">Browser support</h3>
-
-<p>Poole and its themes are by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.</p>
-
-<h3 id="download">Download</h3>
-
-<p>These themes are developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/poole">GitHub repository</a> for downloads, bug reports, and features requests.</p>
-
-<p>Thanks!</p>
+    
+     <a href="/2016/01/03/introduction/">Read more</a>
+   
 
   </article>
   
@@ -396,230 +576,31 @@
 
     <time datetime="2016-01-02T00:00:00+05:30" class="post-date">02 Jan 2016</time>
 
-    <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-</div>
+    This is an example blog post that shows several types of HTML content supported in this theme.
 
-<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-
-<blockquote>
-  <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-</blockquote>
-
-<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-
-<h2 id="inline-html-elements">Inline HTML elements</h2>
-
-<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-
-<ul>
-  <li><strong>To bold text</strong>, use <code class="highlighter-rouge">&lt;strong&gt;</code>.</li>
-  <li><em>To italicize text</em>, use <code class="highlighter-rouge">&lt;em&gt;</code>.</li>
-  <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="highlighter-rouge">title</code> attribute for the full phrase.</li>
-  <li>Citations, like <cite>— Mark otto</cite>, should use <code class="highlighter-rouge">&lt;cite&gt;</code>.</li>
-  <li><del>Deleted</del> text should use <code class="highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="highlighter-rouge">&lt;ins&gt;</code>.</li>
-  <li>Superscript <sup>text</sup> uses <code class="highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="highlighter-rouge">&lt;sub&gt;</code>.</li>
-</ul>
-
-<p>Most of these elements are styled by browsers with few modifications on our part.</p>
-
-<h2 id="footnotes">Footnotes</h2>
-
-<p>Footnotes are supported as part of the Markdown syntax. Here’s one in action. Clicking this number<sup id="fnref:fn-sample_footnote"><a href="#fn:fn-sample_footnote" class="footnote">1</a></sup> will lead you to a footnote. The syntax looks like:</p>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">Clicking this number[^fn-sample_footnote]</code></pre></figure>
-
-<p>Each footnote needs the <code class="highlighter-rouge">^fn-</code> prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:</p>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">[^fn-sample_footnote]: Handy! Now click the return link to go back.</code></pre></figure>
-
-<p>You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.</p>
-
-<h2 id="heading">Heading</h2>
-
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-<h3 id="code">Code</h3>
-
-<p>Inline code is available with the <code class="highlighter-rouge">&lt;code&gt;</code> element. Snippets of multiple lines of code are supported through Pygments. Longer lines will automatically scroll horizontally when needed.</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Example can be run directly in your JavaScript console
-</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those arguments
-</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"return a + b"</span><span class="p">);</span>
-
-<span class="c1">// Call the function
-</span>
-<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span></code></pre></figure>
-
-<p>You may also optionally show code snippets with line numbers. Add <code class="highlighter-rouge">linenos</code> to the Pygments tags.</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8</pre></td><td class="code"><pre><span class="c1">// Example can be run directly in your JavaScript console
-</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those arguments
-</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"return a + b"</span><span class="p">);</span>
-
-<span class="c1">// Call the function
-</span>
-<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-
-<h3 id="gists-via-github-pages">Gists via GitHub Pages</h3>
-
-<p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/13f94b734a4ddb132735.js?file=gist.md"> </script>
-
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>
-
-<h3 id="lists">Lists</h3>
-
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-<ul>
-  <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-  <li>Donec id elit non mi porta gravida at eget metus.</li>
-  <li>Nulla vitae elit libero, a pharetra augue.</li>
-</ul>
-
-<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-
-<ol>
-  <li>Vestibulum id ligula porta felis euismod semper.</li>
-  <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-  <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-</ol>
-
-<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-
-<dl>
-  <dt>HyperText Markup Language (HTML)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
-
-  <dt>Cascading Style Sheets (CSS)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
-
-  <dt>JavaScript (JS)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
-
-<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-<h3 id="images">Images</h3>
-
-<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
-
-<p><img src="http://placehold.it/800x400" alt="placeholder" title="Large example image" />
-<img src="http://placehold.it/400x200" alt="placeholder" title="Medium example image" />
-<img src="http://placehold.it/200x200" alt="placeholder" title="Small example image" /></p>
-
-<h3 id="tables">Tables</h3>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-<hr />
-
-<p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:fn-sample_footnote">
-      <p>Handy! Now click the return link to go back. <a href="#fnref:fn-sample_footnote" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
-  </article>
-  
-  <article class="post">
-    <h1 class="post-title">
-      <a href="/2016/01/01/whats-jekyll/">
-        What's Jekyll?
-      </a>
-    </h1>
-
-    <time datetime="2016-01-01T00:00:00+05:30" class="post-date">01 Jan 2016</time>
-
-    <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/jekyll/jekyll/blob/master/README.markdown">the project’s readme</a>:</p>
-
-<blockquote>
-  <p>Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
-
-<p>It’s an immensely useful tool. Find out more by <a href="https://github.com/jekyll/jekyll">visiting the project on GitHub</a>.</p>
+    
+     <a href="/2016/01/02/example-content/">Read more</a>
+   
 
   </article>
   
 </div>
-
+<!--
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page2/">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>
   
-</div>
+</div> -->
 
       </main>
       
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2016-09-12T02:24:50+05:30">2016</time>. All rights reserved.
+          &copy; <time datetime="2016-09-12T19:20:12+05:30">2016</time>. All rights reserved.
         </small>
       </footer>
     </div>

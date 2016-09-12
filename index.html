@@ -50,11 +50,16 @@ title: Home
 
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
-    {{ post.content }}
+    {{ post.excerpt }}
+
+    {% if post.excerpt %}
+     <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+   {% endif %}
+
   </article>
   {% endfor %}
 </div>
-
+<!--
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
@@ -66,4 +71,4 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</div> -->

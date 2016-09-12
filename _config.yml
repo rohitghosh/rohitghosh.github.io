@@ -1,5 +1,6 @@
 # Permalinks
 permalink:           pretty
+excerpt_separator: "<!--more-->"
 
 # Setup
 title:               Random Walk
@@ -43,3 +44,4 @@ github:
 gems:
   - jekyll-paginate
   - jekyll-gist
+  # - octopress-video-tag
