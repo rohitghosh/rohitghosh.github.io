@@ -4,7 +4,7 @@
  <title>Iota</title>
  <link href="http://rohitghosh.github.io//atom.xml" rel="self"/>
  <link href="http://rohitghosh.github.io//"/>
- <updated>2016-09-17T21:08:33+05:30</updated>
+ <updated>2016-09-18T03:12:24+05:30</updated>
  <id>http://rohitghosh.github.io/</id>
  <author>
    <name>Rohit Ghosh</name>
@@ -28,8 +28,12 @@ given similar training data with labels (i.e. mapping of every image in training
 E.g. Detecting from various images of hand-written digits, images of ‘1’ &amp;amp; ‘7’ are different categories.&lt;/p&gt;
 
 &lt;p&gt;There is another category - semi-supervised learning. More on it later. So unsupervised seems easy, right ? So
-exactly why this hype around unsupervised learning ? Apparently it turns out that unsupervised learning
-could well be the only way forward. Reasons being&lt;/p&gt;
+exactly why this hype around unsupervised learning ?&lt;/p&gt;
+
+&lt;p style=&quot;color:gray; font-size: 80%; text-align: center;&quot;&gt;&lt;img src=&quot;/images/unsuper-vs-super.png&quot; alt=&quot;placeholder&quot; style=&quot;margin 0 auto; display:block;&quot; /&gt;
+Fig: No. of ICML papers on supervised &amp;amp; unsupervised learning&lt;/p&gt;
+
+&lt;p&gt;Well, going by trends of ICML papers (pic above), it very well proves that focus of all the deep learning research has been around supervised learning all this while. Apparently it turns out that unsupervised learning could in fact actually be holding the key to future. Reasons being&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -102,7 +106,7 @@ But, if you’re reading buzzwords everyday and wondering what’s AI, what’s 
 
 &lt;h3 id=&quot;what-is-ai--what-is-not-&quot;&gt;What is AI &amp;amp; what is not ?&lt;/h3&gt;
 
-&lt;p&gt;AI, coined in 1956 at University of DartMouth by psychologist Rosenblatt,
+&lt;p style=&quot;color:gray; font-size: 80%; text-align: center;&quot;&gt;AI, coined in 1956 at University of DartMouth by psychologist Rosenblatt,
 was defined vaguely as a field aimed to make machines do the same work as humans.
 In the years to follow, conventional Machine Learning (ML) algorithms became norm of the day in AI till
 something strangely powerful happened in 2012. This was the ImageNet (an image recognition competition)
@@ -112,7 +116,8 @@ This breakthrough was strange cause till then Convolutional Nets (CNNs) had hard
 beyond hand-written character recognition (here’s a &lt;a href=&quot;https://www.youtube.com/watch?v=FwFduRA_L6Q&quot;&gt;video&lt;/a&gt; on Le Cunn training CNN
 back in ‘93 at Bell Labs) and yet it was powerful  as it  entailed an explosion in AI over
 the coming years in ways people in academia and industry had hardly foreseen. See the figure below.
-&lt;img src=&quot;/images/newplot.png&quot; alt=&quot;NIPS &amp;amp; ICML Papers submitted&quot; title=&quot;NIPS &amp;amp; ICML Papers submitted&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/images/newplot.png&quot; alt=&quot;NIPS &amp;amp; ICML Papers submitted&quot; title=&quot;NIPS &amp;amp; ICML Papers submitted&quot; /&gt;
+Fig: No. of research papers accepted in major AI/ML conferences&lt;/p&gt;
 
 &lt;p&gt;To put it simply, AI agents learn from data, preferably huge amounts of data - instead of programmer himself hard-coding and modelling reactions to various use cases. The idea is&lt;/p&gt;
 
@@ -137,9 +142,11 @@ the coming years in ways people in academia and industry had hardly foreseen. Se
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;Higher computational powers&lt;/em&gt;: The computational gains because of advent of GPU and parallelised computation was a major force behind the boom of AI this time. In fact, parallelised computation was the recipe for Prof. Hinton’s Image Net success in 2012.&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Data, enormous data&lt;/em&gt;: Most importantly, the sole reason AI has seen success beyond expectations has been availability of data - something that could’ve only happened in post-internet, post-Google &amp;amp; post-FB era.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Funding&lt;/em&gt;: Apart from the above reasons, the amount of money that has been flowing intp AI in the current boom has been phenomenal- the funding for AI based startups has been pegged somewhere at $310mn for the year 2015.
-&lt;img src=&quot;/images/AI_quarterly_finance_20160203.jpg&quot; alt=&quot;Funding in AI Space&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Funding&lt;/em&gt;: Apart from the above reasons, the amount of money that has been flowing intp AI in the current boom has been phenomenal- the funding for AI based startups has been pegged somewhere at $310mn for the year 2015.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p style=&quot;color:gray; font-size: 80%; text-align: center;&quot;&gt;&lt;img src=&quot;/images/AI_quarterly_finance_20160203.jpg&quot; alt=&quot;Funding in AI Space&quot; /&gt;
+Fig : Funding in AI based startups taken from CB Insights article&lt;/p&gt;
 
 &lt;h3 id=&quot;what-ai-can-and-what-it-cant&quot;&gt;What AI can and what it can’t&lt;/h3&gt;
 

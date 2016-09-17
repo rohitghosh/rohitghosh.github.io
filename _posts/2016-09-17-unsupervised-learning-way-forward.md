@@ -15,8 +15,13 @@ given similar training data with labels (i.e. mapping of every image in training
 E.g. Detecting from various images of hand-written digits, images of '1' & '7' are different categories.
 
 There is another category - semi-supervised learning. More on it later. So unsupervised seems easy, right ? So
-exactly why this hype around unsupervised learning ? Apparently it turns out that unsupervised learning
-could well be the only way forward. Reasons being
+exactly why this hype around unsupervised learning ?
+
+![placeholder](/images/unsuper-vs-super.png){: style="margin 0 auto; display:block;"}
+Fig: No. of ICML papers on supervised & unsupervised learning
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+Well, going by trends of ICML papers (pic above), it very well proves that focus of all the deep learning research has been around supervised learning all this while. Apparently it turns out that unsupervised learning could in fact actually be holding the key to future. Reasons being
 
 1. <em>Anotation is costly and hence rare</em> - Annotation refers to labelling such as marking out the boundary of each pet in a picture of pets and then labelling them with corresponding category of pet. Hence, annotation for images and text is costly because of higher man-hours needed to annotate each example.  Even though annotation platforms like [AMT](https://www.mturk.com/mturk/welcome) have arrived to rescue, annotated datasets are tough to obtain for most of the applications
 

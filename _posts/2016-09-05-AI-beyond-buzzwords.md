@@ -23,6 +23,8 @@ beyond hand-written character recognition (here's a [video](https://www.youtube.
 back in '93 at Bell Labs) and yet it was powerful  as it  entailed an explosion in AI over
 the coming years in ways people in academia and industry had hardly foreseen. See the figure below.
 ![NIPS & ICML Papers submitted](/images/newplot.png "NIPS & ICML Papers submitted")
+Fig: No. of research papers accepted in major AI/ML conferences
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 To put it simply, AI agents learn from data, preferably huge amounts of data - instead of programmer himself hard-coding and modelling reactions to various use cases. The idea is
 
@@ -45,7 +47,10 @@ The nets that were hardly 10 layers deep pre-2012, can now reach 1000 layers eas
 * <em>Higher computational powers</em>: The computational gains because of advent of GPU and parallelised computation was a major force behind the boom of AI this time. In fact, parallelised computation was the recipe for Prof. Hinton's Image Net success in 2012.
 * <em>Data, enormous data</em>: Most importantly, the sole reason AI has seen success beyond expectations has been availability of data - something that could’ve only happened in post-internet, post-Google & post-FB era.
 * <em>Funding</em>: Apart from the above reasons, the amount of money that has been flowing intp AI in the current boom has been phenomenal- the funding for AI based startups has been pegged somewhere at $310mn for the year 2015.
+
 ![Funding in AI Space](/images/AI_quarterly_finance_20160203.jpg)
+Fig : Funding in AI based startups taken from CB Insights article
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 ### What AI can and what it can't
 
