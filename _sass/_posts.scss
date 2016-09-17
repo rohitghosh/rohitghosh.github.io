@@ -41,6 +41,22 @@
   border-bottom: 1px solid #eee;
 }
 
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+    width: 450px;
+    height: 300px;
+}
+
+.center-image-wide
+{
+    margin: 0 auto;
+    display: block;
+    width: 700px;
+    height: 200px;
+}
+
 .related-posts {
   padding-left: 0;
   list-style: none;
