@@ -56,9 +56,7 @@ So given that we understand the importance of unsupervised learning, let's have 
 
 ![placeholder](/images/ae.png){: .center-image }
 
-<!-- ### Deep Belief Networks
 
-They are almost similar to AEs except that RBMs are stacked together to form DBNs. The subsequent layers in DBNs try to model the previous layer and hence can be greedily optimised. The hidden layer of the last RBM is the output of the net. Similar to AEs. DBNs can also learn the Identity function, hence denoising (in form of sampling the input) is necessary for DBNs as well -->
 
 ### Generative Adversial Networks
 
