@@ -4,7 +4,7 @@
  <title>Iota</title>
  <link href="http://rohitghosh.github.io//atom.xml" rel="self"/>
  <link href="http://rohitghosh.github.io//"/>
- <updated>2016-09-18T03:12:24+05:30</updated>
+ <updated>2016-09-22T02:13:15+05:30</updated>
  <id>http://rohitghosh.github.io/</id>
  <author>
    <name>Rohit Ghosh</name>
@@ -106,7 +106,7 @@ But, if you’re reading buzzwords everyday and wondering what’s AI, what’s 
 
 &lt;h3 id=&quot;what-is-ai--what-is-not-&quot;&gt;What is AI &amp;amp; what is not ?&lt;/h3&gt;
 
-&lt;p style=&quot;color:gray; font-size: 80%; text-align: center;&quot;&gt;AI, coined in 1956 at University of DartMouth by psychologist Rosenblatt,
+&lt;p&gt;AI, coined in 1956 at University of DartMouth by psychologist Rosenblatt,
 was defined vaguely as a field aimed to make machines do the same work as humans.
 In the years to follow, conventional Machine Learning (ML) algorithms became norm of the day in AI till
 something strangely powerful happened in 2012. This was the ImageNet (an image recognition competition)
@@ -115,8 +115,9 @@ designed by Le Cunn (in FB now), the-then prof at NYU.
 This breakthrough was strange cause till then Convolutional Nets (CNNs) had hardly shown any usefulness
 beyond hand-written character recognition (here’s a &lt;a href=&quot;https://www.youtube.com/watch?v=FwFduRA_L6Q&quot;&gt;video&lt;/a&gt; on Le Cunn training CNN
 back in ‘93 at Bell Labs) and yet it was powerful  as it  entailed an explosion in AI over
-the coming years in ways people in academia and industry had hardly foreseen. See the figure below.
-&lt;img src=&quot;/images/newplot.png&quot; alt=&quot;NIPS &amp;amp; ICML Papers submitted&quot; title=&quot;NIPS &amp;amp; ICML Papers submitted&quot; /&gt;
+the coming years in ways people in academia and industry had hardly foreseen. See the figure below.&lt;/p&gt;
+
+&lt;p style=&quot;color:gray; font-size: 80%; text-align: center;&quot;&gt;&lt;img src=&quot;/images/newplot.png&quot; alt=&quot;NIPS &amp;amp; ICML Papers submitted&quot; title=&quot;NIPS &amp;amp; ICML Papers submitted&quot; /&gt;
 Fig: No. of research papers accepted in major AI/ML conferences&lt;/p&gt;
 
 &lt;p&gt;To put it simply, AI agents learn from data, preferably huge amounts of data - instead of programmer himself hard-coding and modelling reactions to various use cases. The idea is&lt;/p&gt;

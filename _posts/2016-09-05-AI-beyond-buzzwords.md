@@ -22,6 +22,7 @@ This breakthrough was strange cause till then Convolutional Nets (CNNs) had hard
 beyond hand-written character recognition (here's a [video](https://www.youtube.com/watch?v=FwFduRA_L6Q) on Le Cunn training CNN
 back in '93 at Bell Labs) and yet it was powerful  as it  entailed an explosion in AI over
 the coming years in ways people in academia and industry had hardly foreseen. See the figure below.
+
 ![NIPS & ICML Papers submitted](/images/newplot.png "NIPS & ICML Papers submitted")
 Fig: No. of research papers accepted in major AI/ML conferences
 {: style="color:gray; font-size: 80%; text-align: center;"}
