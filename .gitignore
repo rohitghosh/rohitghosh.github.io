@@ -2,3 +2,5 @@ _posts/2016-01-01-whats-jekyll.md
 _posts/2016-01-02-example-content.md
 _posts/2016-01-03-introduction.md
 /drafts
+.DS_Store
+*/.DS_store
