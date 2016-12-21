@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Driving Cab In NYC
+title: Optimising Cab Routes In NYC Using Data
 comments: true
 excerpt: In most of the cab rides I had my conversation with the cab owner tending towards to the ever-so-important question - “How to generate maximum revenue?” Do I drive at night? Where do I start my trip? What do I optimize for – longer rides in a longer time or repeated shorter rides in the same time? How long do I drive? and alike questions. This post tries to solve some of those questions along with bringing out some interesting insights about traffic in NYC.
 ---
