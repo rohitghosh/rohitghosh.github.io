@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Segmenting Overlapping Chromosomes using Deep Learning &middot; Iota
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Iota" href="/atom.xml">
+</head>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83853401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  <body>
+
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">Iota</a>
+          
+          &nbsp;&nbsp;&nbsp;
+          <small><a href="/about">About</a></small>
+          
+          &nbsp;&nbsp;&nbsp;
+          <small><a href="/archive">Archive</a></small>
+          
+          &nbsp;&nbsp;&nbsp;
+          <small><a href="/atom.xml">Feed</a></small>
+          
+        </h3>
+      </header>
+
+      <main>
+        <article class="post">
+  <h1 class="post-title">Segmenting Overlapping Chromosomes using Deep Learning</h1>
+  <time datetime="2017-01-25T00:00:00+05:30" class="post-date">25 Jan 2017</time>
+  <p>After my last <a href="https://rohitghosh.github.io/2016/12/10/NYC-cabs-data/">post</a> on optimization of earnings by cab drivers as they drive through New York City – this post explores using deep learning aka Artificial Intelligence to segment out overlapping chromosomes on slides used for cytogenetic studies. The project is part of a set of open problems posted on <a href="http://ai-on.org/">AI ON website</a>. The repo for the project is also available on my <a href="https://github.com/rohitghosh/chromosome_segementation">GitHub</a>. We’re still working on it and would love if any of you would like to join and contribute !</p>
+
+<h3 id="cytogenetics">Cytogenetics</h3>
+
+<p>Cytogenetics is the study of cells, more so chromosomes and their structure and changes.Changes to chromosome structure can disrupt genes, causing the proteins made from disrupted genes to be missing or faulty. Depending on size, location, and timing, structural changes in chromosomes can lead to birth defects, syndromes or even cancer.</p>
+
+<p>The importance of separating overlapping chromosomes can be understood in terms of the orders of difficulty involved in manually segmenting them. In cytogenetics, experiments typically starts from chromosomal preparations fixed on glass slides. Occasionally a chromosome can fall on another one, yielding overlapping chromosomes in the image. Before computers and images processing with photography, chromosomes were cut from a paper picture and then classified (at least two paper pictures were required when chromosomes are overlapping). More recently, automatic segmentation methods were developed to overcome this problem. Most of the time these methods rely on a geometric analysis of the chromosome contour and require some human intervention when partial overlap occurs.</p>
+
+<h3 id="semantic-segmentation--u-net">Semantic Segmentation &amp; U Net</h3>
+
+<p>Semantic segmentation for computer vision refers to segmenting out objects from images. Semantic because objects need to be segmented out with respect to surrounding objects/ background in image. That is, algorithm should be able to segment a tree even if it’s taken close-up or at some distance, and not based on absolute cor-ordinates of the object in the image.
+<img src="/images/chromosome_seg/semantic_segmnentation.jpeg" alt="placeholder" style="margin:auto; display:inline; float:right;" /></p>
+
+<p>So if a net needs to segment out a tree – it would first need to understand what features of an object make it look like tree. Like leaves, branches stem and in a particular arrangement - leaves on branches, branching out from trunk only makes it look like a tree. But only understanding features won’t help – it would need to map the features learnt to an image and segment only the matching part – to mark out a tree.</p>
+
+<p>This is exactly what a U Net does – it uses convolutional feature maps to first learn the features as it progressively downsamples the image size. After that, the learnt feature maps are progressively upsampled and in each step they are merged with feature maps of same size from the downsampling phase. The merging step helps the net to spatially place the learn features back into the image.
+<img src="/images/chromosome_seg/unet.png" alt="placeholder" style="margin:auto; display:inline;" /></p>
+
+<p>As the image above explains,input image consist of 3 channels (RGB) and is passed through 3 convolutional layers before being downsampled to half the size. After extracting enough features, with dimensions of 28 x 28, they maps are upsampled and in each step merged with the feature map of the corresponding step in downsampling path.</p>
+
+<h3 id="training-methodologies">Training Methodologies</h3>
+
+<p>Each of the annotated images consists of 4 classes, where class 4 is the common region between 2 overlapping chromosomes. The classes 1 &amp; 2 , are non-overlapping part of each of the chromosomes. Class 0 is the background
+The performance of the net was observed using mean_dice_score. It was computed as </p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">dice_score = 2*I/(GT + PL)</code></p>
+
+  <p>I  = number of pixels predicted correctly except background</p>
+
+  <p>GT = number of pixels which belong to ground-truth except background</p>
+
+  <p>PL = number of pixels in predicted image except background.</p>
+</blockquote>
+
+<p>There were 2 methods of training attempted
+•	Treating all the classes independently (param <code class="highlighter-rouge">combine_label = True</code> in segmentation.py)
+•	Treating Class 1 &amp; Class 2 as same i.e. Class 1 and Class 3 as Class 2 (param combine_label = False in segmentation.py)Assumption being the non-overlapping parts inherently aren’t different in each chromosomes. Then we can apply conventional CV methods like watershed algorithm to distinguish between the non-overlapping blobs</p>
+
+<h3 id="results">Results</h3>
+
+<p>The results looked a lot of promising where my validation set was first 200 images from 20% of the total dataset. With combined labels, could reach a dice score as high as 0.97. Without combined labels, could reach a dice score as high as 0.81.</p>
+
+<h4 id="predictions-for-combinedlabel">Predictions for combined_label</h4>
+<p><img src="/images/chromosome_seg/Vis_combined_label_2.png" alt="predict_combined_new" />
+<img src="/images/chromosome_seg/Vis_combined_label_1.png" alt="predict_combined_new" /></p>
+
+<h4 id="predictions-without-combining-labels">Predictions without combining labels</h4>
+<p><img src="/images/chromosome_seg/Vis_non_combined_label_1.png" alt="predict_non_combined_new" />
+<img src="/images/chromosome_seg/Vis_non_combined_label_2.png" alt="predict_non_combined_new" /></p>
+
+</article>
+
+
+<aside class="related">
+  <h3>Related posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2016/12/10/NYC-cabs-data/">
+          Optimising Cab Routes In NYC Using Data
+          <small><time datetime="2016-12-10T00:00:00+05:30">10 Dec 2016</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2016/09/17/unsupervised-learning-way-forward/">
+          Is unsupervised learning the way forward ?
+          <small><time datetime="2016-09-17T00:00:00+05:30">17 Sep 2016</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2016/09/05/AI-beyond-buzzwords/">
+          AI - Beyond Buzzwords & Comparisons To Human Abilities
+          <small><time datetime="2016-09-05T00:00:00+05:30">05 Sep 2016</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+      </main>
+      
+<div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+    this.page.url = "";  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = "Segmenting Overlapping Chromosomes using Deep Learning" // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//rohitghosh-github-io-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2017-01-28T16:49:42+05:30">2017</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

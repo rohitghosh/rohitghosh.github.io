@@ -4,7 +4,7 @@
  <title>Iota</title>
  <link href="http://rohitghosh.github.io//atom.xml" rel="self"/>
  <link href="http://rohitghosh.github.io//"/>
- <updated>2016-12-21T06:22:34+05:30</updated>
+ <updated>2017-01-28T16:49:42+05:30</updated>
  <id>http://rohitghosh.github.io/</id>
  <author>
    <name>Rohit Ghosh</name>
@@ -13,7 +13,65 @@
 
  
  <entry>
-   <title>Driving Cab In NYC</title>
+   <title>Segmenting Overlapping Chromosomes using Deep Learning</title>
+   <link href="http://rohitghosh.github.io//2017/01/25/overlapping-chromosome-segmentation/"/>
+   <updated>2017-01-25T00:00:00+05:30</updated>
+   <id>http://rohitghosh.github.io//2017/01/25/overlapping-chromosome-segmentation</id>
+   <content type="html">&lt;p&gt;After my last &lt;a href=&quot;https://rohitghosh.github.io/2016/12/10/NYC-cabs-data/&quot;&gt;post&lt;/a&gt; on optimization of earnings by cab drivers as they drive through New York City – this post explores using deep learning aka Artificial Intelligence to segment out overlapping chromosomes on slides used for cytogenetic studies. The project is part of a set of open problems posted on &lt;a href=&quot;http://ai-on.org/&quot;&gt;AI ON website&lt;/a&gt;. The repo for the project is also available on my &lt;a href=&quot;https://github.com/rohitghosh/chromosome_segementation&quot;&gt;GitHub&lt;/a&gt;. We’re still working on it and would love if any of you would like to join and contribute !&lt;/p&gt;
+
+&lt;h3 id=&quot;cytogenetics&quot;&gt;Cytogenetics&lt;/h3&gt;
+
+&lt;p&gt;Cytogenetics is the study of cells, more so chromosomes and their structure and changes.Changes to chromosome structure can disrupt genes, causing the proteins made from disrupted genes to be missing or faulty. Depending on size, location, and timing, structural changes in chromosomes can lead to birth defects, syndromes or even cancer.&lt;/p&gt;
+
+&lt;p&gt;The importance of separating overlapping chromosomes can be understood in terms of the orders of difficulty involved in manually segmenting them. In cytogenetics, experiments typically starts from chromosomal preparations fixed on glass slides. Occasionally a chromosome can fall on another one, yielding overlapping chromosomes in the image. Before computers and images processing with photography, chromosomes were cut from a paper picture and then classified (at least two paper pictures were required when chromosomes are overlapping). More recently, automatic segmentation methods were developed to overcome this problem. Most of the time these methods rely on a geometric analysis of the chromosome contour and require some human intervention when partial overlap occurs.&lt;/p&gt;
+
+&lt;h3 id=&quot;semantic-segmentation--u-net&quot;&gt;Semantic Segmentation &amp;amp; U Net&lt;/h3&gt;
+
+&lt;p&gt;Semantic segmentation for computer vision refers to segmenting out objects from images. Semantic because objects need to be segmented out with respect to surrounding objects/ background in image. That is, algorithm should be able to segment a tree even if it’s taken close-up or at some distance, and not based on absolute cor-ordinates of the object in the image.
+&lt;img src=&quot;/images/chromosome_seg/semantic_segmnentation.jpeg&quot; alt=&quot;placeholder&quot; style=&quot;margin:auto; display:inline; float:right;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So if a net needs to segment out a tree – it would first need to understand what features of an object make it look like tree. Like leaves, branches stem and in a particular arrangement - leaves on branches, branching out from trunk only makes it look like a tree. But only understanding features won’t help – it would need to map the features learnt to an image and segment only the matching part – to mark out a tree.&lt;/p&gt;
+
+&lt;p&gt;This is exactly what a U Net does – it uses convolutional feature maps to first learn the features as it progressively downsamples the image size. After that, the learnt feature maps are progressively upsampled and in each step they are merged with feature maps of same size from the downsampling phase. The merging step helps the net to spatially place the learn features back into the image.
+&lt;img src=&quot;/images/chromosome_seg/unet.png&quot; alt=&quot;placeholder&quot; style=&quot;margin:auto; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the image above explains,input image consist of 3 channels (RGB) and is passed through 3 convolutional layers before being downsampled to half the size. After extracting enough features, with dimensions of 28 x 28, they maps are upsampled and in each step merged with the feature map of the corresponding step in downsampling path.&lt;/p&gt;
+
+&lt;h3 id=&quot;training-methodologies&quot;&gt;Training Methodologies&lt;/h3&gt;
+
+&lt;p&gt;Each of the annotated images consists of 4 classes, where class 4 is the common region between 2 overlapping chromosomes. The classes 1 &amp;amp; 2 , are non-overlapping part of each of the chromosomes. Class 0 is the background
+The performance of the net was observed using mean_dice_score. It was computed as &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dice_score = 2*I/(GT + PL)&lt;/code&gt;&lt;/p&gt;
+
+  &lt;p&gt;I  = number of pixels predicted correctly except background&lt;/p&gt;
+
+  &lt;p&gt;GT = number of pixels which belong to ground-truth except background&lt;/p&gt;
+
+  &lt;p&gt;PL = number of pixels in predicted image except background.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There were 2 methods of training attempted
+•	Treating all the classes independently (param &lt;code class=&quot;highlighter-rouge&quot;&gt;combine_label = True&lt;/code&gt; in segmentation.py)
+•	Treating Class 1 &amp;amp; Class 2 as same i.e. Class 1 and Class 3 as Class 2 (param combine_label = False in segmentation.py)Assumption being the non-overlapping parts inherently aren’t different in each chromosomes. Then we can apply conventional CV methods like watershed algorithm to distinguish between the non-overlapping blobs&lt;/p&gt;
+
+&lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
+
+&lt;p&gt;The results looked a lot of promising where my validation set was first 200 images from 20% of the total dataset. With combined labels, could reach a dice score as high as 0.97. Without combined labels, could reach a dice score as high as 0.81.&lt;/p&gt;
+
+&lt;h4 id=&quot;predictions-for-combinedlabel&quot;&gt;Predictions for combined_label&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/chromosome_seg/Vis_combined_label_2.png&quot; alt=&quot;predict_combined_new&quot; /&gt;
+&lt;img src=&quot;/images/chromosome_seg/Vis_combined_label_1.png&quot; alt=&quot;predict_combined_new&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;predictions-without-combining-labels&quot;&gt;Predictions without combining labels&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/chromosome_seg/Vis_non_combined_label_1.png&quot; alt=&quot;predict_non_combined_new&quot; /&gt;
+&lt;img src=&quot;/images/chromosome_seg/Vis_non_combined_label_2.png&quot; alt=&quot;predict_non_combined_new&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Optimising Cab Routes In NYC Using Data</title>
    <link href="http://rohitghosh.github.io//2016/12/10/NYC-cabs-data/"/>
    <updated>2016-12-10T00:00:00+05:30</updated>
    <id>http://rohitghosh.github.io//2016/12/10/NYC-cabs-data</id>

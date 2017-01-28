@@ -54,8 +54,70 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="//2017/01/25/overlapping-chromosome-segmentation/">
+        Segmenting Overlapping Chromosomes using Deep Learning
+      </a>
+    </h1>
+
+    <span class="post-date">25 Jan 2017</span>
+
+    <p>After my last <a href="https://rohitghosh.github.io/2016/12/10/NYC-cabs-data/">post</a> on optimization of earnings by cab drivers as they drive through New York City – this post explores using deep learning aka Artificial Intelligence to segment out overlapping chromosomes on slides used for cytogenetic studies. The project is part of a set of open problems posted on <a href="http://ai-on.org/">AI ON website</a>. The repo for the project is also available on my <a href="https://github.com/rohitghosh/chromosome_segementation">GitHub</a>. We’re still working on it and would love if any of you would like to join and contribute !</p>
+
+<h3 id="cytogenetics">Cytogenetics</h3>
+
+<p>Cytogenetics is the study of cells, more so chromosomes and their structure and changes.Changes to chromosome structure can disrupt genes, causing the proteins made from disrupted genes to be missing or faulty. Depending on size, location, and timing, structural changes in chromosomes can lead to birth defects, syndromes or even cancer.</p>
+
+<p>The importance of separating overlapping chromosomes can be understood in terms of the orders of difficulty involved in manually segmenting them. In cytogenetics, experiments typically starts from chromosomal preparations fixed on glass slides. Occasionally a chromosome can fall on another one, yielding overlapping chromosomes in the image. Before computers and images processing with photography, chromosomes were cut from a paper picture and then classified (at least two paper pictures were required when chromosomes are overlapping). More recently, automatic segmentation methods were developed to overcome this problem. Most of the time these methods rely on a geometric analysis of the chromosome contour and require some human intervention when partial overlap occurs.</p>
+
+<h3 id="semantic-segmentation--u-net">Semantic Segmentation &amp; U Net</h3>
+
+<p>Semantic segmentation for computer vision refers to segmenting out objects from images. Semantic because objects need to be segmented out with respect to surrounding objects/ background in image. That is, algorithm should be able to segment a tree even if it’s taken close-up or at some distance, and not based on absolute cor-ordinates of the object in the image.
+<img src="/images/chromosome_seg/semantic_segmnentation.jpeg" alt="placeholder" style="margin:auto; display:inline; float:right;" /></p>
+
+<p>So if a net needs to segment out a tree – it would first need to understand what features of an object make it look like tree. Like leaves, branches stem and in a particular arrangement - leaves on branches, branching out from trunk only makes it look like a tree. But only understanding features won’t help – it would need to map the features learnt to an image and segment only the matching part – to mark out a tree.</p>
+
+<p>This is exactly what a U Net does – it uses convolutional feature maps to first learn the features as it progressively downsamples the image size. After that, the learnt feature maps are progressively upsampled and in each step they are merged with feature maps of same size from the downsampling phase. The merging step helps the net to spatially place the learn features back into the image.
+<img src="/images/chromosome_seg/unet.png" alt="placeholder" style="margin:auto; display:inline;" /></p>
+
+<p>As the image above explains,input image consist of 3 channels (RGB) and is passed through 3 convolutional layers before being downsampled to half the size. After extracting enough features, with dimensions of 28 x 28, they maps are upsampled and in each step merged with the feature map of the corresponding step in downsampling path.</p>
+
+<h3 id="training-methodologies">Training Methodologies</h3>
+
+<p>Each of the annotated images consists of 4 classes, where class 4 is the common region between 2 overlapping chromosomes. The classes 1 &amp; 2 , are non-overlapping part of each of the chromosomes. Class 0 is the background
+The performance of the net was observed using mean_dice_score. It was computed as </p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">dice_score = 2*I/(GT + PL)</code></p>
+
+  <p>I  = number of pixels predicted correctly except background</p>
+
+  <p>GT = number of pixels which belong to ground-truth except background</p>
+
+  <p>PL = number of pixels in predicted image except background.</p>
+</blockquote>
+
+<p>There were 2 methods of training attempted
+•	Treating all the classes independently (param <code class="highlighter-rouge">combine_label = True</code> in segmentation.py)
+•	Treating Class 1 &amp; Class 2 as same i.e. Class 1 and Class 3 as Class 2 (param combine_label = False in segmentation.py)Assumption being the non-overlapping parts inherently aren’t different in each chromosomes. Then we can apply conventional CV methods like watershed algorithm to distinguish between the non-overlapping blobs</p>
+
+<h3 id="results">Results</h3>
+
+<p>The results looked a lot of promising where my validation set was first 200 images from 20% of the total dataset. With combined labels, could reach a dice score as high as 0.97. Without combined labels, could reach a dice score as high as 0.81.</p>
+
+<h4 id="predictions-for-combinedlabel">Predictions for combined_label</h4>
+<p><img src="/images/chromosome_seg/Vis_combined_label_2.png" alt="predict_combined_new" />
+<img src="/images/chromosome_seg/Vis_combined_label_1.png" alt="predict_combined_new" /></p>
+
+<h4 id="predictions-without-combining-labels">Predictions without combining labels</h4>
+<p><img src="/images/chromosome_seg/Vis_non_combined_label_1.png" alt="predict_non_combined_new" />
+<img src="/images/chromosome_seg/Vis_non_combined_label_2.png" alt="predict_non_combined_new" /></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="//2016/12/10/NYC-cabs-data/">
-        Driving Cab In NYC
+        Optimising Cab Routes In NYC Using Data
       </a>
     </h1>
 
@@ -454,52 +516,11 @@ The lack of ‘variable rewards’ &amp; ‘ego boost’ makes this model not so
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="//2016/02/09/starting-to-code/">
-        So, can coding be a lot easier ?
-      </a>
-    </h1>
-
-    <span class="post-date">09 Feb 2016</span>
-
-    <p>So most of us have had our share of interactions with developers, in some way or the other.
-Luckily enough I have now been on both sides - and frankly the experience of creating things from scratch  as a developer has been overwhelming.
-But then not being a <cite>‘techie’</cite> from Day One has left me pondering with certain things, and in this “Hello World” of LinkedIn Posts, I take up one of them.</p>
-
-<p>The best part of my <em>tech-yatra</em> has been the discovery that there’s a a very strong &amp; active community around  development and StackOverflow is undoubtedly the best.
-The support and exhaustiveness of the community is widespread which definitely helps.
-But, as a rookie developer, 4 months ago, I was really torn apart in finding out relevant questions on StackOverflow, reading the top voted answers and then reading documentations as well whenever I faced an error statement.
-To add to my woes, not all solutions were customised as per my requirement !</p>
-
-<p>Now, obviously there’s a joy in learning non-linearly, figuring out things as we go but sometimes these ‘blocks’can be dangerous.
-In fact, while at IIT, a major reason I discontinued coding was partially because of these ‘blocks’.
-As Mihaly Csikszentmihalyi, the pioneer of the concept of ‘Flow’ and author of the book by same name ( a highly recommended read for all ) explains from the figure below, our challenges  need to be proportionate to our skill level for our continuous progress  - otherwise we often get stuck up in anxiety zones  with tough problems and we never progress onto the next level.
-So, if the plan is to be on a steep learning curve or learn within limited time  (say, over weekends where you can’t waste time getting stuck up and lose inspiration to progress),  is there a solution to do programming an easier way ? Not so easy that it becomes boring but easy enough to be in ‘flow’.</p>
-
-<p><img src="/images/Introduction.jpg" alt="placeholder" /></p>
-
-<p>What if those guys who answer your questions on StackOverflow or people like them could answer your questions personally  and instantaneously ?
-What if those moments of anxiety caused by getting stuck can be overcome easily with the help from experts who have relevant credible experience in that language/software/ framework  ?
-Not an online tutor  (cause that pushes coding  into ‘boring’ zone ), but a chat-based assistant whom you could delegate the task of “StackOverflow”ing  things and helping you ASAP only when you’re stuck in a problem.
-And by virtue of their own expertise in the language coupled with past experience of handling similar problems from other users, the help would arrive an user’s way far more earlier than their own efforts would have !</p>
-
-<p>I would love to know your opinion, especially more if you’re starting out as a developer and otherwise also,
-as to whether you would like to use a similar help at a monetary cost of say, less than 1k/year  and how badly would you need it for whatever reasons may be -
-web, app, software development or data science applications, machine learning applications etc.</p>
-
-<p>Would love to hear your opinion and feel free to contact me if this sounds interesting !</p>
-
-<p>P.S. : Just to give a context of areas where I faced challenges, in past 4 months :  I was involved  extensively into building Machine Learning algorithms in fields of NLP, predictive analytics
-while building a small Android application on the side. Currently, though I have been figuring out things on applications of  NLG and block-chain technology.</p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page2">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>
@@ -512,8 +533,25 @@ while building a small Android application on the side. Currently, though I have
   
   <article class="post">
     <h1 class="post-title">
+      <a href="/2017/01/25/overlapping-chromosome-segmentation/">
+        Segmenting Overlapping Chromosomes using Deep Learning
+      </a>
+    </h1>
+
+    <time datetime="2017-01-25T00:00:00+05:30" class="post-date">25 Jan 2017</time>
+
+    Deep Learning has been making quite a lot of progress in computer vision tasks of late. In this post, I go on to explain how to use 2D U Net (one of the most popular papers of 2015-16 in computer vision) for segmenting out overlapping chromosomes on a slide used for cytogenetics.
+
+    
+     <a href="/2017/01/25/overlapping-chromosome-segmentation/">Read more</a>
+   
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
       <a href="/2016/12/10/NYC-cabs-data/">
-        Driving Cab In NYC
+        Optimising Cab Routes In NYC Using Data
       </a>
     </h1>
 
@@ -578,28 +616,11 @@ while building a small Android application on the side. Currently, though I have
 
   </article>
   
-  <article class="post">
-    <h1 class="post-title">
-      <a href="/2016/02/09/starting-to-code/">
-        So, can coding be a lot easier ?
-      </a>
-    </h1>
-
-    <time datetime="2016-02-09T00:00:00+05:30" class="post-date">09 Feb 2016</time>
-
-    So most of us have had our share of interactions with developers, in some way or the other.Luckily enough I have now been on both sides - and frankly the experience of creating things from scratch  as a developer has been overwhelming. But then not being a 'techie' from Day One has left me pondering with certain things, and in this "Hello World" of LinkedIn Posts, I take up one of them.
-
-    
-     <a href="/2016/02/09/starting-to-code/">Read more</a>
-   
-
-  </article>
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page2/">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>
@@ -611,7 +632,7 @@ while building a small Android application on the side. Currently, though I have
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2016-12-21T06:22:34+05:30">2016</time>. All rights reserved.
+          &copy; <time datetime="2017-01-28T16:49:42+05:30">2017</time>. All rights reserved.
         </small>
       </footer>
     </div>
