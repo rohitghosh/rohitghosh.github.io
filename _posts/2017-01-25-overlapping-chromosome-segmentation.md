@@ -20,7 +20,7 @@ Semantic segmentation for computer vision refers to segmenting out objects from 
 
 So if a net needs to segment out a tree – it would first need to understand what features of an object make it look like tree. Like leaves, branches stem and in a particular arrangement - leaves on branches, branching out from trunk only makes it look like a tree. But only understanding features won’t help – it would need to map the features learnt to an image and segment only the matching part – to mark out a tree.
 
-This is exactly what a U Net does – it uses convolutional feature maps to first learn the features as it progressively downsamples the image size. After that, the learnt feature maps are progressively upsampled and in each step they are merged with feature maps of same size from the downsampling phase. The merging step helps the net to spatially place the learn features back into the image.
+This is exactly what a [U Net](https://arxiv.org/abs/1505.04597) does – it uses convolutional feature maps to first learn the features as it progressively downsamples the image size. After that, the learnt feature maps are progressively upsampled and in each step they are merged with feature maps of same size from the downsampling phase. The merging step helps the net to spatially place the learn features back into the image.
 ![placeholder](/images/chromosome_seg/unet.png){: style="margin:auto; display:inline;"}
 
  As the image above explains,input image consist of 3 channels (RGB) and is passed through 3 convolutional layers before being downsampled to half the size. After extracting enough features, with dimensions of 28 x 28, they maps are upsampled and in each step merged with the feature map of the corresponding step in downsampling path.
