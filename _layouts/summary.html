@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <p style="font-size:20px">Summary of research papers in finance involving deep learning</p>
+    {% for summary in site.summaries %}
+    <div class="container content">
+      <div style="background:linear-gradient(to bottom,#e8e8e8 0,#f5f5f5 100%); min-height:120px;
+                padding:20px;font-size:16px;">
+        <a href="{{ summary.arxiv_link }}">{{ summary.title }}</a>
+        <p></p>
+        <p> {{ summary.authors }} </p>
+      </div>
+      <br></br>
+      <div style="border: thin solid grey;overflow:auto ;width:100%; height:400px;">
+        <div style="margin-left:5%;margin-right:5%;font-size:16px;">
+        <br></br>
+        {{summary.content}}
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    </div>
+    {% endfor %}
+</article>

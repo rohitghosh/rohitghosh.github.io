@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Deep Learning In Finance &middot; Iota
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Iota" href="/atom.xml">
+</head>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83853401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  <body>
+
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">Iota</a>
+          
+          &nbsp;&nbsp;&nbsp;
+          <small><a href="/about">About</a></small>
+          
+          &nbsp;&nbsp;&nbsp;
+          <small><a href="/archive">Archive</a></small>
+          
+          &nbsp;&nbsp;&nbsp;
+          <small><a href="/atom.xml">Feed</a></small>
+          
+          &nbsp;&nbsp;&nbsp;
+          <small><a href="/dl_in_fin">DL In Finance</a></small>
+          
+        </h3>
+      </header>
+
+      <main>
+        <article class="page">
+  <h1 class="page-title">Deep Learning In Finance</h1>
+  <p style="font-size:20px">Summary of research papers in finance involving deep learning</p>
+    
+    <div class="container content">
+      <div style="background:linear-gradient(to bottom,#e8e8e8 0,#f5f5f5 100%); min-height:120px;
+                padding:20px;font-size:16px;">
+        <a href="https://arxiv.org/abs/1707.02568">Deep Direct Reinforcement Learning for Financial Signal Representation and Trading</a>
+        <p></p>
+        <p> Yue Deng, Feng Bao, Youyong Kong, Zhiquan Ren, and Qionghai Dai, Senior Member, IEEE </p>
+      </div>
+      <br></br>
+      <div style="border: thin solid grey;overflow:auto ;width:100%; height:400px;">
+        <div style="margin-left:5%;margin-right:5%;font-size:16px;">
+        <br></br>
+        <p>In this paper, authors demonstrate the training of an effective RL based algorithm with following novel contributions
+- Using actor-based RL framework instead of typical value-based learning methods, defining market states as a continuous spectrum rather than discretized form of value-based methods.
+- Using a continuous and differentiable objective function that takes care of practical costs like brokerage and slippage
+- Usage of fuzzy representation to account for market uncertainties
+- Novel way of initialization of multiple parts of the net to facilitate convergence
+- Using skip connections in BPTT to avoid gradient vanishing</p>
+
+<h4 id="rl-framework">RL framework</h4>
+
+<p>Conventional value-function based RL frameworks assume discrete state space. Also, in typical Q-learning, the definition of value function always involves a term recoding the future discounted returns. The nature of trading requires to count the profits in an online manner - meaning taking the best possible decision based on current state. Thus, an actor-based RL framework would be predicting action to be taken instead of learning the underlying value function.</p>
+
+<p>This sort of framework can be built using RNN and a differentiable objective function. Also, the actor based framework means each action taken would in turn be affected by a memory of action history in recent past - preventing the system to enter into too many trades causing brokerage and slippage losses.</p>
+
+<p>If p<sub>1</sub>, p<sub>2</sub>,…, p<sub>t</sub>,… as the price sequences released from the exchange center. Then, the return at time point t is easily determined by z<sub>t</sub> = p<sub>t</sub> − p<sub>t−1</sub> . Based on the current market conditions, the real-time trading
+decision (policy) δ<sub>t</sub> ∈ {long, neutral,short}={1, 0, −1} is made on each time point t. With the symbols defined above, the profit R<sub>t</sub> made by the trading model is obtained by</p>
+
+<p><img src="http://imgur.com/kVJp6sl.png" alt="" /></p>
+
+<p>The objective function for training could simply be total return
+<img src="http://imgur.com/yDbeubZ.png" alt="" /></p>
+
+<p>Else, the risk adjusted returns as given by Sharpe ratio can also be used for even better returns.</p>
+
+<p>Improvising on the existing models of DRL, the authors focus on using feature learning instead of sparse encoding of inputs for more robust learning. So the model incorporates 4 hidden layers to learn the features which are then fed to the RNN as input.</p>
+
+<p>Also, the authors included fuzzy representation of inputs to account for market uncertainties. The model takes in 3 fold fuzzy Gaussian representations.</p>
+
+<h4 id="training--initialization">Training &amp; Initialization</h4>
+
+<h6 id="input">Input</h6>
+
+<p>50 element long vector - the last 45 min returns and momentum change to the previous 3 h, 5 h, 1 day, 3 days, and 10 days - is used as input to FDDR. This input is transformed to 150 element vector using 3 fold fuzzy representation. The 150 element vector is passed through 4 hidden layers with 128, 128, 128, and 20 hidden nodes per layer. The 20 element vector finally obtained is trained using RNN and objective function defined above.</p>
+
+<h6 id="output">Output</h6>
+
+<p>The output could be any of the 3 δ<sub>t</sub> values which would be a function of RNN weights, feature representation of fuzzy input and last action i.e. δ<sub>t-1</sub>
+<img src="http://imgur.com/zz8gGxo.png" alt="" /></p>
+
+<h6 id="fuzzy-initialization">Fuzzy initialization</h6>
+
+<p>The fuzzy representations requires 3 means and sigmas for each dimension of 50 dimensions. For the same, the data is clustered into 3 clusters using k-means, and the mean and sigma of respective dimension of 3 clusters provide for good initialization of fuzzy representations</p>
+
+<h6 id="hidden-layer-weight-initialization">Hidden layer weight initialization</h6>
+
+<p>The hidden layer initialization follows from an old technique of initializing a DNN with encoder weights of an AE (AutoEncoder).</p>
+
+<h5 id="evaluation">Evaluation</h5>
+
+<p>The FDDR model is trained on 15000 data points and tested on 5000 data points from each of  the 3 instruments separately - China Shanghai Shenzhen 300 Stock Index Futures (IF) , silver (AG) and sugar (SU) contracts from commodity markets.</p>
+
+<p>The FDDR and other models trained with both total profits (TP) and Sharpe Ratio (SR) as objective functions. The performance looks like this as compared to DRL (deep reinforcement learning - actor based), SCOT (sparse coding-inspired optimal training), DDR (deep direct reinforcement learning), FDDR (fuzzy DDR)
+<img src="http://i.imgur.com/aKeXmhv.png" alt="" /></p>
+
+<p>Also, the performances of market price prediction based DL methods (methods which predict if pries will go up, down or remain stationary) were compared. It’s to be noted that such system performs better than FDDR when there are no transaction costs (like brokerage and slippage involved) but with inclusion of such costs, FDDR seems to be performing even better.</p>
+
+<p><img src="http://imgur.com/I4SQzZz.png" alt="" /></p>
+
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    </div>
+    
+    <div class="container content">
+      <div style="background:linear-gradient(to bottom,#e8e8e8 0,#f5f5f5 100%); min-height:120px;
+                padding:20px;font-size:16px;">
+        <a href="https://arxiv.org/abs/1706.10059">Genetic Deep Neural Networks Using Different Activation Functions for Financial Data Mining</a>
+        <p></p>
+        <p> Luna M. Zhang </p>
+      </div>
+      <br></br>
+      <div style="border: thin solid grey;overflow:auto ;width:100%; height:400px;">
+        <div style="margin-left:5%;margin-right:5%;font-size:16px;">
+        <br></br>
+        <p>In this paper, the authors discuss a evolution based learning and parameter optimization strategy for neural nets used for predicting market prices of DJIA and 30Y Treasury Constant Maturity Rate</p>
+
+<h4 id="evolution-strategy">Evolution strategy</h4>
+
+<p>The author tries evolution based learning strategy instead of traditional back-propagation strategy to optimize the cost function of the neural nets.</p>
+
+<p>In normal DNNs, the weights for each connection is optimized through multiple epochs. GDNNs (Genetically evolved DNNs) are similar to DNNs in their design, except GDNNs designed so as the neurons in each layer have same activation function but the activation function can be either of the 3 - unipolar sigmoid, bipolar sigmoid, tanh. In DNNs, normally the activation function remains the same across neuron but in lieu of the specific design of GDNNs, the activation function type as well as the weights are optimized for each connection.</p>
+
+<h4 id="training">Training</h4>
+
+<p>The fitness function for the evolution is defined as the negative of MSE. The exact mechanism of crossover during mutation hasn’t been defined explicitly in the paper. As per general evolution mechanism, the best performing GDNNs are chosen for cross-over to produce offsprings for next generation.</p>
+
+<h5 id="results">Results</h5>
+
+<p>The results show that the best performance is obtained for fewer hidden layers (likely due to overfitting in larger networks). The evolution strategy helps to improve the performance of networks with multiple activation across different layers as compared to same activations in each layer.</p>
+
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    </div>
+    
+</article>
+
+      </main>
+      
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2017-08-13T16:10:13+05:30">2017</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
