@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deep Direct Reinforcement Learning for Financial Signal Representation and Trading
-arxiv_link: https://arxiv.org/abs/1707.02568
+arxiv_link: https://google.com/search?q=Deep+Direct+Reinforcement+Learning+for+Financial+Signal+Representation+and+Trading.
 comments: true
 authors: Yue Deng, Feng Bao, Youyong Kong, Zhiquan Ren, and Qionghai Dai, Senior Member, IEEE
 ---

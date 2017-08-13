@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Genetic Deep Neural Networks Using Different Activation Functions for Financial Data Mining
-arxiv_link: https://arxiv.org/abs/1706.10059
+arxiv_link: https://google.com/search?q=Genetic+deep+neural+networks+using+different+activation+functions+for+financial+data+mining
 comments: true
 authors: Luna M. Zhang
 ---
