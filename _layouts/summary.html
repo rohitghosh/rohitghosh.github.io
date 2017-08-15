@@ -6,7 +6,7 @@ layout: default
   <h1 class="page-title">{{ page.title }}</h1>
   <p style="font-size:20px">Summary of research papers in finance involving deep learning</p>
     {% for summary in site.summaries %}
-    <div class="container content">
+    <div id="{{summary.pid}}" class="container content">
       <div style="background:linear-gradient(to bottom,#e8e8e8 0,#f5f5f5 100%); min-height:120px;
                 padding:20px;font-size:16px;">
         <a href="{{ summary.arxiv_link }}">{{ summary.title }}</a>

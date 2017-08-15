@@ -14,5 +14,5 @@ title: Archive
 ### DL In Finance Paper Summaries
 
 {% for summary in site.summaries %}
-  * [ {{ summary.title }} ]({{ summary.arxiv_link }})
+  * [ {{ summary.title }} ](/dl_in_fin/#{{ summary.pid }})
 {% endfor %}
