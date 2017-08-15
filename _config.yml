@@ -15,7 +15,6 @@ exclude:             ['posts']
 pages_list:
   About: '/about'
   Archive: '/archive'
-  Feed: '/atom.xml'
   DL In Finance: '/dl_in_fin'
 
 highlighter: rouge
