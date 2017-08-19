@@ -16,6 +16,7 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   DL In Finance: '/dl_in_fin'
+  Contact: '/contact'
 
 highlighter: rouge
 markdown: kramdown

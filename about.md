@@ -10,7 +10,6 @@ A 2014 graduate from IIT Bombay, I had worked as Risk Analyst with Nomura right 
 
 I focus mostly on R&D areas in computer vision part of Deep Learning. In addition to vision, I also keenly follow developments in reinforcement learning (mostly related to trading strategies). Also, on weekends, I am mostly playing either playing tennis or at swimming pool. An avid Hindi music buff, I like to read on varied topics, and keep a tab on the newest breakthroughs. Hence, a varied lot of topics in the [blog](https://rohitghosh.github.io/).
 
-In case you plan to collaborate or want help in DL, feel free to write to me  rohitghosh177 [at] gmail [dot] com
 
 #### Publications
 
