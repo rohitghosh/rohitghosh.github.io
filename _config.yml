@@ -15,7 +15,7 @@ exclude:             ['posts']
 pages_list:
   About: '/about'
   Archive: '/archive'
-  DL In Finance: '/dl_in_fin'
+  DL In Finance: '/deep_learning_in_finance'
   Contact: '/contact'
 
 highlighter: rouge

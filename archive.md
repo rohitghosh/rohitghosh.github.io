@@ -14,5 +14,5 @@ title: Archive
 ### DL In Finance Paper Summaries
 
 {% for summary in site.summaries %}
-  * [ {{ summary.title }} ](/dl_in_fin/#{{ summary.pid }})
+  * [ {{ summary.title }} ](/deep_learning_in_finance/#{{ summary.pid }})
 {% endfor %}
