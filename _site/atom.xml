@@ -4,13 +4,37 @@
  <title>Iota</title>
  <link href="http://rohitghosh.github.io//atom.xml" rel="self"/>
  <link href="http://rohitghosh.github.io//"/>
- <updated>2017-09-29T01:52:08+05:30</updated>
+ <updated>2018-01-07T17:39:59+05:30</updated>
  <id>http://rohitghosh.github.io/</id>
  <author>
    <name>Rohit Ghosh</name>
    <email>rohitghosh177@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Visualizing and debugging deep convolutional networks</title>
+   <link href="http://rohitghosh.github.io//2018/01/05/visualising-debugging-deep-neural-networks/"/>
+   <updated>2018-01-05T00:00:00+05:30</updated>
+   <id>http://rohitghosh.github.io//2018/01/05/visualising-debugging-deep-neural-networks</id>
+   <content type="html">&lt;p&gt;Have you been ever stuck while the neural network executes smoothly across epochs but the loss doesn’t decrease ? Or may be the loss decreases but not the way you would like it to ? Debugging a deep neural network is helpful if not essential for a lot of use cases.&lt;/p&gt;
+
+&lt;p&gt;If you want to know why building a visualisation algo is important, especially in radiology - you can have a read &lt;a href=&quot;http://www.towards.ai/building-trustable-ai/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In this series of posts we describe the different visualization techniques for explaining decisions of convolutional neural nets. These posts are a summary of the different techniques that existed in research, starting all the way back from deconvolution based attribution systems in 2013.&lt;/p&gt;
+
+&lt;p&gt;The visualization technique posts are divided into 2 parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In &lt;a href=&quot;http://blog.qure.ai/notes/visualizing_deep_learning&quot;&gt;Part 1&lt;/a&gt; we talk about perturbation based methods which includes - Occlusion, LIME &amp;amp; Integrated Gradients&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In &lt;a href=&quot;http://blog.qure.ai/notes/deep-learning-visualization-gradient-based-methods&quot;&gt;Part 2&lt;/a&gt; we talk about back propagation based methods. They are again divided into gradient based back propagation (Deconvolution, Guided backpropagation, GradCAM) &amp;amp; relevance score based (LRP, DeepLIFT)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Segmenting Overlapping Chromosomes using Deep Learning</title>
