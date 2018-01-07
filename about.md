@@ -26,8 +26,10 @@ I focus mostly on R&D areas in computer vision part of Deep Learning. In additio
 
  5. Research abstract on  **Automatic detection of generalised cerebral atrophy using deep neural networks from head CT scans** accepted for scientific paper presentation at annual conference of ECR'18, Vienna, Austria
 
- 6. Research abstract on **Deep neural networks to identify and localize intracerebral hemorrhage and midline shift in CT scans of brain** accepted for Scientific Poster and Alternate for Oral Presentations Status in annual Conference '17 by Radilogical Society of North America (RSNA)
+ 6. Research abstract on **Automated detection of intra and extra-axial haemorrhages on CT brain images using deep neural networks** accepted for scientific paper presentation at annual conference of ECR'18, Vienna, Austria
 
- 7. Co-authored part of Chapter on **RegTech Investment & Compliance Spending** in the upcoming <strong>The RegTECH Book</strong> by Wiley Publications, discussing Merits & Demerits of Shared Risk Engine along with the proposed architecture and scope for adavanced risk management using ML.
+ 7. Research abstract on **Deep neural networks to identify and localize intracerebral hemorrhage and midline shift in CT scans of brain** accepted for Scientific Poster and Alternate for Oral Presentations Status in annual Conference '17 by Radilogical Society of North America (RSNA)
 
- 8. Co-authored case study on *Exploring Long-Term Relationships in Logistics Industry* along with teaching note, published by McGraw Hill Education Pvt. Ltd. as part of the book <strong>Cases In Business Marketing</strong>
+ 8. Co-authored part of Chapter on **RegTech Investment & Compliance Spending** in the upcoming <strong>The RegTECH Book</strong> by Wiley Publications, discussing Merits & Demerits of Shared Risk Engine along with the proposed architecture and scope for adavanced risk management using ML.
+
+ 9. Co-authored case study on *Exploring Long-Term Relationships in Logistics Industry* along with teaching note, published by McGraw Hill Education Pvt. Ltd. as part of the book <strong>Cases In Business Marketing</strong>
