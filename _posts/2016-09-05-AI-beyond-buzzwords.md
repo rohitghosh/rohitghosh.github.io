@@ -2,7 +2,7 @@
 layout: post
 title: AI - Beyond Buzzwords & Comparisons To Human Abilities
 comments: true
-excerpt: Any heated argument on AI these days soon ends up in a predictable trajectory - so DeepMind's AlphaGo beats Go champ,Tesla to compete with Uber using AI driven cars, ethical dilemma of driver-less cars and finally - would robots overpower humankind (on sidelines of the last debate would be venue of the Matrix themed D-Day - Earth or Mars !)...if you’re reading buzzwords everyday and wondering what's AI, what's the big deal about it and where we stand as of today compared to human-like capabilities of AI
+excerpt: Any heated argument on AI these days soon ends up in a predictable trajectory - so DeepMind's AlphaGo beats Go champ,Tesla to compete with Uber using AI driven cars, ethical dilemma of driver-less cars and finally - would robots overpower humankind
 
 ---
 Any heated argument on AI these days soon ends up in a predictable trajectory - so DeepMind's AlphaGo beats Go champ, Tesla to compete with Uber using AI driven cars, ethical dilemma of driver-less cars and finally - would robots overpower humankind (on sidelines of the last debate would be venue of the Matrix themed D-Day - Earth or Mars !)
