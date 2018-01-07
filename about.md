@@ -20,12 +20,14 @@ I focus mostly on R&D areas in computer vision part of Deep Learning. In additio
  2. Research abstract with collaboration with Yale School of Cardiology on **Application of Machine Learning Methods for Prediction of Outcomes after Cardiac Transplantation: Insights from the UNOS Database**  accepted for oral presentation
  at American Heart Association Annual Conference '16, New Orleans, USA
 
- 3. Research abstract on **Automated detection and localisation of skull fractures from CT scans using deep learning** accepted for scientific paper presentation at annual conference of European Society of Radiology (ECR) '18, Vienna, Austria
+ 3. Research paper with collaboration with Yale School of Cardiology **Variation in Practice Patterns and Outcomes Across UNOS Allocation Regions** accepted for publication in Clinical Cardiology
 
- 4. Research abstract on  **Automatic detection of generalised cerebral atrophy using deep neural networks from head CT scans** accepted for scientific paper presentation at annual conference of ECR'18, Vienna, Austria
+ 4. Research abstract on **Automated detection and localisation of skull fractures from CT scans using deep learning** accepted for scientific paper presentation at annual conference of European Society of Radiology (ECR) '18, Vienna, Austria
 
- 5. Research abstract on **Deep neural networks to identify and localize intracerebral hemorrhage and midline shift in CT scans of brain** accepted for Scientific Poster and Alternate for Oral Presentations Status in annual Conference '17 by Radilogical Society of North America (RSNA)
+ 5. Research abstract on  **Automatic detection of generalised cerebral atrophy using deep neural networks from head CT scans** accepted for scientific paper presentation at annual conference of ECR'18, Vienna, Austria
 
- 6. Co-authored part of Chapter on **RegTech Investment & Compliance Spending** in the upcoming <strong>The RegTECH Book</strong> by Wiley Publications, discussing Merits & Demerits of Shared Risk Engine along with the proposed architecture and scope for adavanced risk management using ML.
+ 6. Research abstract on **Deep neural networks to identify and localize intracerebral hemorrhage and midline shift in CT scans of brain** accepted for Scientific Poster and Alternate for Oral Presentations Status in annual Conference '17 by Radilogical Society of North America (RSNA)
 
- 7. Co-authored case study on *Exploring Long-Term Relationships in Logistics Industry* along with teaching note, published by McGraw Hill Education Pvt. Ltd. as part of the book <strong>Cases In Business Marketing</strong>
+ 7. Co-authored part of Chapter on **RegTech Investment & Compliance Spending** in the upcoming <strong>The RegTECH Book</strong> by Wiley Publications, discussing Merits & Demerits of Shared Risk Engine along with the proposed architecture and scope for adavanced risk management using ML.
+
+ 8. Co-authored case study on *Exploring Long-Term Relationships in Logistics Industry* along with teaching note, published by McGraw Hill Education Pvt. Ltd. as part of the book <strong>Cases In Business Marketing</strong>
