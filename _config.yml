@@ -17,6 +17,8 @@ pages_list:
   Archive: '/archive'
   DL In Finance: '/deep_learning_in_finance'
   Contact: '/contact'
+  TB: '/tb'
+
 
 highlighter: rouge
 markdown: kramdown
