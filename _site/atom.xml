@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Iota</title>
- <link href="http://rohitghosh.github.io//atom.xml" rel="self"/>
- <link href="http://rohitghosh.github.io//"/>
- <updated>2020-08-23T19:38:19+05:30</updated>
- <id>http://rohitghosh.github.io/</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2024-02-21T02:03:36+00:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Rohit Ghosh</name>
    <email>rohitghosh177@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Visualizing and debugging deep convolutional networks</title>
-   <link href="http://rohitghosh.github.io//2018/01/05/visualising-debugging-deep-neural-networks/"/>
-   <updated>2018-01-05T00:00:00+05:30</updated>
-   <id>http://rohitghosh.github.io//2018/01/05/visualising-debugging-deep-neural-networks</id>
+   <link href="http://localhost:4000/2018/01/05/visualising-debugging-deep-neural-networks/"/>
+   <updated>2018-01-05T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2018/01/05/visualising-debugging-deep-neural-networks</id>
    <content type="html">&lt;p&gt;Have you been ever stuck while the neural network executes smoothly across epochs but the loss doesn’t decrease ? Or may be the loss decreases but not the way you would like it to ? Debugging a deep neural network is helpful if not essential for a lot of use cases.&lt;/p&gt;
 
 &lt;p&gt;If you want to know why building a visualisation algo is important, especially in radiology - you can have a read &lt;a href=&quot;http://www.towards.ai/building-trustable-ai/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
@@ -38,9 +38,9 @@
  
  <entry>
    <title>Segmenting Overlapping Chromosomes using Deep Learning</title>
-   <link href="http://rohitghosh.github.io//2017/01/25/overlapping-chromosome-segmentation/"/>
-   <updated>2017-01-25T00:00:00+05:30</updated>
-   <id>http://rohitghosh.github.io//2017/01/25/overlapping-chromosome-segmentation</id>
+   <link href="http://localhost:4000/2017/01/25/overlapping-chromosome-segmentation/"/>
+   <updated>2017-01-25T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2017/01/25/overlapping-chromosome-segmentation</id>
    <content type="html">&lt;p&gt;After my last &lt;a href=&quot;https://rohitghosh.github.io/2016/12/10/NYC-cabs-data/&quot;&gt;post&lt;/a&gt; on optimization of earnings by cab drivers as they drive through New York City – this post explores using deep learning aka Artificial Intelligence to segment out overlapping chromosomes on slides used for cytogenetic studies. The project is part of a set of open problems posted on &lt;a href=&quot;http://ai-on.org/&quot;&gt;AI ON website&lt;/a&gt;. The repo for the project is also available on my &lt;a href=&quot;https://github.com/rohitghosh/chromosome_segementation&quot;&gt;GitHub&lt;/a&gt;. We’re still working on it and would love if any of you would like to join and contribute !&lt;/p&gt;
 
 &lt;h3 id=&quot;cytogenetics&quot;&gt;Cytogenetics&lt;/h3&gt;
@@ -67,7 +67,7 @@
 The performance of the net was observed using mean_dice_score. It was computed as &lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dice_score = 2*I/(GT + PL)&lt;/code&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dice_score = 2*I/(GT + PL)&lt;/code&gt;&lt;/p&gt;
 
   &lt;p&gt;I  = number of pixels predicted correctly except background&lt;/p&gt;
 
@@ -77,14 +77,14 @@ The performance of the net was observed using mean_dice_score. It was computed a
 &lt;/blockquote&gt;
 
 &lt;p&gt;There were 2 methods of training attempted
-•	Treating all the classes independently (param &lt;code class=&quot;highlighter-rouge&quot;&gt;combine_label = True&lt;/code&gt; in segmentation.py)
+•	Treating all the classes independently (param &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;combine_label = True&lt;/code&gt; in segmentation.py)
 •	Treating Class 1 &amp;amp; Class 2 as same i.e. Class 1 and Class 3 as Class 2 (param combine_label = False in segmentation.py)Assumption being the non-overlapping parts inherently aren’t different in each chromosomes. Then we can apply conventional CV methods like watershed algorithm to distinguish between the non-overlapping blobs&lt;/p&gt;
 
 &lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
 
 &lt;p&gt;The results looked a lot of promising where my validation set was first 200 images from 20% of the total dataset. With combined labels, could reach a dice score as high as 0.97. Without combined labels, could reach a dice score as high as 0.81.&lt;/p&gt;
 
-&lt;h4 id=&quot;predictions-for-combinedlabel&quot;&gt;Predictions for combined_label&lt;/h4&gt;
+&lt;h4 id=&quot;predictions-for-combined_label&quot;&gt;Predictions for combined_label&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&quot;/images/chromosome_seg/Vis_combined_label_2.png&quot; alt=&quot;predict_combined_new&quot; /&gt;
 &lt;img src=&quot;/images/chromosome_seg/Vis_combined_label_1.png&quot; alt=&quot;predict_combined_new&quot; /&gt;&lt;/p&gt;
 
@@ -96,9 +96,9 @@ The performance of the net was observed using mean_dice_score. It was computed a
  
  <entry>
    <title>Optimising Cab Routes In NYC Using Data</title>
-   <link href="http://rohitghosh.github.io//2016/12/10/NYC-cabs-data/"/>
-   <updated>2016-12-10T00:00:00+05:30</updated>
-   <id>http://rohitghosh.github.io//2016/12/10/NYC-cabs-data</id>
+   <link href="http://localhost:4000/2016/12/10/NYC-cabs-data/"/>
+   <updated>2016-12-10T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2016/12/10/NYC-cabs-data</id>
    <content type="html">&lt;p&gt;These days, on my cab rides, I have met some interesting folks driving the cabs. And, a lot of those times, when the driver was owner of the cab, our conversation tended towards to the ever-so-important question - “How to generate maximum revenue?”&lt;/p&gt;
 
 &lt;p&gt;Do I drive at night? Where do I start my trip? What do I optimize for – longer rides in a longer time or repeated shorter rides in the same time? How long do I drive? and alike questions. There’s a lot of other factors as well, apart from just money that can motivate a cab driver’s decisions - for the purpose of this study those are not addressed.&lt;/p&gt;
@@ -186,7 +186,7 @@ Interestingly , looking at the patterns of trips for each day of the month, it�
 
 &lt;p&gt;In the above equation point to be noted is the&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;total_time_travelled = trip time - stationary_minutes&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;total_time_travelled = trip time - stationary_minutes&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;For going from Step 2 to Step 3, the assumption (mentioned in the footer and proved in &lt;em&gt;Appendix&lt;/em&gt;) would work fine.
 So from the above equations it is clear that for a cab driver to optimize his earning, he would need to optimize for 2 parameters given he has a fixed trip time&lt;/p&gt;
@@ -205,25 +205,21 @@ So from the above equations it is clear that for a cab driver to optimize his ea
   &lt;li&gt;If drive needs to go to next day, beyond 23:59, make necessary adjustments&lt;/li&gt;
   &lt;li&gt;For selecting the itinerary apply recursively the function to select next best route if end_time is not crossed is as follows
     &lt;ul&gt;
-      &lt;li&gt;For selecting next route,
-        &lt;ol&gt;
-          &lt;li&gt;List all the  drop-off locations for which people have used cabs at the start_locaton at the start_time&lt;/li&gt;
-          &lt;li&gt;Calculate  the time taken to travel to each of the locations&lt;/li&gt;
-          &lt;li&gt;Check for the demand at each of the locations and check if they are above the threshold (20% of median of threshold)&lt;/li&gt;
-          &lt;li&gt;Check for the best mean_fare per min across all the routes and choose the best&lt;/li&gt;
-          &lt;li&gt;Calculate the time of travel &amp;amp; estimated fare based on data&lt;/li&gt;
-          &lt;li&gt;After reaching the dropoff location,adding a 3 mins for transaction, next route selection algo is applied again  &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;If there’s no demand for any cab at the current location (normally happens around late_night) or demand below threshold at all possible dropoff locations
-        &lt;ol&gt;
-          &lt;li&gt;Do a 1 degree search for the nearest square on grid which has demand&lt;/li&gt;
-          &lt;li&gt;For multiple regions with demand, choose the region with best “mean fare per min” route starting from that region&lt;/li&gt;
-          &lt;li&gt;Estimate the time of travel to the region chosen above and add no fare to the corresponding journey&lt;/li&gt;
-          &lt;li&gt;If no region found having demand in 1-degree search, keep on increasing degree of search till the best location is found&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
+      &lt;li&gt;For selecting next route,&lt;/li&gt;
     &lt;/ul&gt;
+    &lt;ol&gt;
+      &lt;li&gt;List all the  drop-off locations for which people have used cabs at the start_locaton at the start_time&lt;/li&gt;
+      &lt;li&gt;Calculate  the time taken to travel to each of the locations&lt;/li&gt;
+      &lt;li&gt;Check for the demand at each of the locations and check if they are above the threshold (20% of median of threshold)&lt;/li&gt;
+      &lt;li&gt;Check for the best mean_fare per min across all the routes and choose the best&lt;/li&gt;
+      &lt;li&gt;Calculate the time of travel &amp;amp; estimated fare based on data&lt;/li&gt;
+      &lt;li&gt;After reaching the dropoff location,adding a 3 mins for transaction, next route selection algo is applied again  
+     - If there’s no demand for any cab at the current location (normally happens around late_night) or demand below threshold at all possible dropoff locations&lt;/li&gt;
+      &lt;li&gt;Do a 1 degree search for the nearest square on grid which has demand&lt;/li&gt;
+      &lt;li&gt;For multiple regions with demand, choose the region with best “mean fare per min” route starting from that region&lt;/li&gt;
+      &lt;li&gt;Estimate the time of travel to the region chosen above and add no fare to the corresponding journey&lt;/li&gt;
+      &lt;li&gt;If no region found having demand in 1-degree search, keep on increasing degree of search till the best location is found&lt;/li&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -262,9 +258,9 @@ The graph above depicts the time taken by a cab driver to earn the median fare o
  
  <entry>
    <title>Is unsupervised learning the way forward ?</title>
-   <link href="http://rohitghosh.github.io//2016/09/17/unsupervised-learning-way-forward/"/>
-   <updated>2016-09-17T00:00:00+05:30</updated>
-   <id>http://rohitghosh.github.io//2016/09/17/unsupervised-learning-way-forward</id>
+   <link href="http://localhost:4000/2016/09/17/unsupervised-learning-way-forward/"/>
+   <updated>2016-09-17T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2016/09/17/unsupervised-learning-way-forward</id>
    <content type="html">&lt;p&gt;Of late, we have heard a lot of talk about unsupervised learning being the way forward.
 Before we delve further, let’s clear the air around the types of learning.&lt;/p&gt;
 
@@ -334,7 +330,7 @@ Fig: No. of ICML papers on supervised &amp;amp; unsupervised learning&lt;/p&gt;
 &lt;dt&gt;Applications&lt;/dt&gt;
 &lt;dd&gt;GANs are normally used for generating dreams, filling in missing patches of images, extrapolating background from images.&lt;/dd&gt;
 &lt;dt&gt;Architecture&lt;/dt&gt;
-&lt;dd&gt;Generative Adversial Nets generally also consists 2 parts - generator networks and discriminator nets. The generator nets generates say images from just Gaussian noise signal as input. The discriminator is shown the output from generator net along with 'real' images and trained to discriminate between real and 'fake generated' images. The error signal from prediction is backpropagated back through the gnerative net as well. Thus over the epochs, the discriminator becomes good at identifying 'real' from 'fake generated' images while generator net becomes good at generating a near-real image.&lt;/dd&gt;
+&lt;dd&gt;Generative Adversial Nets generally also consists 2 parts - generator networks and discriminator nets. The generator nets generates say images from just Gaussian noise signal as input. The discriminator is shown the output from generator net along with &apos;real&apos; images and trained to discriminate between real and &apos;fake generated&apos; images. The error signal from prediction is backpropagated back through the gnerative net as well. Thus over the epochs, the discriminator becomes good at identifying &apos;real&apos; from &apos;fake generated&apos; images while generator net becomes good at generating a near-real image.&lt;/dd&gt;
 &lt;dt&gt;Variants&lt;/dt&gt;
 &lt;dd&gt;DCGAN, GAN &lt;/dd&gt;
 &lt;/dl&gt;
@@ -344,9 +340,9 @@ Fig: No. of ICML papers on supervised &amp;amp; unsupervised learning&lt;/p&gt;
  
  <entry>
    <title>AI - Beyond Buzzwords &amp; Comparisons To Human Abilities</title>
-   <link href="http://rohitghosh.github.io//2016/09/05/AI-beyond-buzzwords/"/>
-   <updated>2016-09-05T00:00:00+05:30</updated>
-   <id>http://rohitghosh.github.io//2016/09/05/AI-beyond-buzzwords</id>
+   <link href="http://localhost:4000/2016/09/05/AI-beyond-buzzwords/"/>
+   <updated>2016-09-05T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2016/09/05/AI-beyond-buzzwords</id>
    <content type="html">&lt;p&gt;Any heated argument on AI these days soon ends up in a predictable trajectory - so DeepMind’s AlphaGo beats Go champ, Tesla to compete with Uber using AI driven cars, ethical dilemma of driver-less cars and finally - would robots overpower humankind (on sidelines of the last debate would be venue of the Matrix themed D-Day - Earth or Mars !)&lt;/p&gt;
 
 &lt;p&gt;So if you’re writing a sci-fi book or you’re a tarot-reader then don’t bother to read further.
@@ -423,9 +419,9 @@ Fig : Funding in AI based startups taken from CB Insights article&lt;/p&gt;
  
  <entry>
    <title>Why Tinder works? Solving for X in Tinder for X (Part 2/2)</title>
-   <link href="http://rohitghosh.github.io//2016/03/15/solving-for-X-in-Tinder-for-X/"/>
-   <updated>2016-03-15T00:00:00+05:30</updated>
-   <id>http://rohitghosh.github.io//2016/03/15/solving-for-X-in-Tinder-for-X</id>
+   <link href="http://localhost:4000/2016/03/15/solving-for-X-in-Tinder-for-X/"/>
+   <updated>2016-03-15T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2016/03/15/solving-for-X-in-Tinder-for-X</id>
    <content type="html">&lt;p&gt;In &lt;a href=&quot;https://www.linkedin.com/pulse/why-tinder-works-insights-how-build-addictive-products-nivedan-rathi&quot;&gt;Part 1&lt;/a&gt;, we delved into the user psychology of what makes Tinder such an addictive product and what are its takeaways for your business idea in general. We’ve all heard a lot about the Uber for X model now, where X has been abused and overused a lot (2016 is an especially interesting time for these startups). Let’s talk about the other cool thing - Tinder for X. So we ventured out to find what makes or break a Tinder for X model where X could be different industries like recruitment, shopping etc.&lt;/p&gt;
 
 &lt;p&gt;Let’s begin with all the major criteria for any business problem to be suited for Tinder for X model&lt;/p&gt;
@@ -482,9 +478,9 @@ The lack of ‘variable rewards’ &amp;amp; ‘ego boost’ makes this model no
  
  <entry>
    <title>So, can coding be a lot easier ?</title>
-   <link href="http://rohitghosh.github.io//2016/02/09/starting-to-code/"/>
-   <updated>2016-02-09T00:00:00+05:30</updated>
-   <id>http://rohitghosh.github.io//2016/02/09/starting-to-code</id>
+   <link href="http://localhost:4000/2016/02/09/starting-to-code/"/>
+   <updated>2016-02-09T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2016/02/09/starting-to-code</id>
    <content type="html">&lt;p&gt;So most of us have had our share of interactions with developers, in some way or the other.
 Luckily enough I have now been on both sides - and frankly the experience of creating things from scratch  as a developer has been overwhelming.
 But then not being a &lt;cite&gt;‘techie’&lt;/cite&gt; from Day One has left me pondering with certain things, and in this “Hello World” of LinkedIn Posts, I take up one of them.&lt;/p&gt;

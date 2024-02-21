@@ -6,3 +6,5 @@ gem 'jekyll-gist'
 # group :jekyll_plugins do
 #   gem 'octopress-video-tag'
 # end
+
+gem "webrick", "~> 1.8"

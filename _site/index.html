@@ -51,9 +51,6 @@
           &nbsp;&nbsp;&nbsp;
           <small><a href="/contact">Contact</a></small>
           
-          &nbsp;&nbsp;&nbsp;
-          <small><a href="/tb">TB</a></small>
-          
         </h3>
       </header>
 
@@ -123,7 +120,7 @@
 The performance of the net was observed using mean_dice_score. It was computed as </p>
 
 <blockquote>
-  <p><code class="highlighter-rouge">dice_score = 2*I/(GT + PL)</code></p>
+  <p><code class="language-plaintext highlighter-rouge">dice_score = 2*I/(GT + PL)</code></p>
 
   <p>I  = number of pixels predicted correctly except background</p>
 
@@ -133,14 +130,14 @@ The performance of the net was observed using mean_dice_score. It was computed a
 </blockquote>
 
 <p>There were 2 methods of training attempted
-•	Treating all the classes independently (param <code class="highlighter-rouge">combine_label = True</code> in segmentation.py)
+•	Treating all the classes independently (param <code class="language-plaintext highlighter-rouge">combine_label = True</code> in segmentation.py)
 •	Treating Class 1 &amp; Class 2 as same i.e. Class 1 and Class 3 as Class 2 (param combine_label = False in segmentation.py)Assumption being the non-overlapping parts inherently aren’t different in each chromosomes. Then we can apply conventional CV methods like watershed algorithm to distinguish between the non-overlapping blobs</p>
 
 <h3 id="results">Results</h3>
 
 <p>The results looked a lot of promising where my validation set was first 200 images from 20% of the total dataset. With combined labels, could reach a dice score as high as 0.97. Without combined labels, could reach a dice score as high as 0.81.</p>
 
-<h4 id="predictions-for-combinedlabel">Predictions for combined_label</h4>
+<h4 id="predictions-for-combined_label">Predictions for combined_label</h4>
 <p><img src="/images/chromosome_seg/Vis_combined_label_2.png" alt="predict_combined_new" />
 <img src="/images/chromosome_seg/Vis_combined_label_1.png" alt="predict_combined_new" /></p>
 
@@ -246,7 +243,7 @@ Interestingly , looking at the patterns of trips for each day of the month, it�
 
 <p>In the above equation point to be noted is the</p>
 
-<p><code class="highlighter-rouge">total_time_travelled = trip time - stationary_minutes</code></p>
+<p><code class="language-plaintext highlighter-rouge">total_time_travelled = trip time - stationary_minutes</code></p>
 
 <p>For going from Step 2 to Step 3, the assumption (mentioned in the footer and proved in <em>Appendix</em>) would work fine.
 So from the above equations it is clear that for a cab driver to optimize his earning, he would need to optimize for 2 parameters given he has a fixed trip time</p>
@@ -265,25 +262,21 @@ So from the above equations it is clear that for a cab driver to optimize his ea
   <li>If drive needs to go to next day, beyond 23:59, make necessary adjustments</li>
   <li>For selecting the itinerary apply recursively the function to select next best route if end_time is not crossed is as follows
     <ul>
-      <li>For selecting next route,
-        <ol>
-          <li>List all the  drop-off locations for which people have used cabs at the start_locaton at the start_time</li>
-          <li>Calculate  the time taken to travel to each of the locations</li>
-          <li>Check for the demand at each of the locations and check if they are above the threshold (20% of median of threshold)</li>
-          <li>Check for the best mean_fare per min across all the routes and choose the best</li>
-          <li>Calculate the time of travel &amp; estimated fare based on data</li>
-          <li>After reaching the dropoff location,adding a 3 mins for transaction, next route selection algo is applied again  </li>
-        </ol>
-      </li>
-      <li>If there’s no demand for any cab at the current location (normally happens around late_night) or demand below threshold at all possible dropoff locations
-        <ol>
-          <li>Do a 1 degree search for the nearest square on grid which has demand</li>
-          <li>For multiple regions with demand, choose the region with best “mean fare per min” route starting from that region</li>
-          <li>Estimate the time of travel to the region chosen above and add no fare to the corresponding journey</li>
-          <li>If no region found having demand in 1-degree search, keep on increasing degree of search till the best location is found</li>
-        </ol>
-      </li>
+      <li>For selecting next route,</li>
     </ul>
+    <ol>
+      <li>List all the  drop-off locations for which people have used cabs at the start_locaton at the start_time</li>
+      <li>Calculate  the time taken to travel to each of the locations</li>
+      <li>Check for the demand at each of the locations and check if they are above the threshold (20% of median of threshold)</li>
+      <li>Check for the best mean_fare per min across all the routes and choose the best</li>
+      <li>Calculate the time of travel &amp; estimated fare based on data</li>
+      <li>After reaching the dropoff location,adding a 3 mins for transaction, next route selection algo is applied again  
+     - If there’s no demand for any cab at the current location (normally happens around late_night) or demand below threshold at all possible dropoff locations</li>
+      <li>Do a 1 degree search for the nearest square on grid which has demand</li>
+      <li>For multiple regions with demand, choose the region with best “mean fare per min” route starting from that region</li>
+      <li>Estimate the time of travel to the region chosen above and add no fare to the corresponding journey</li>
+      <li>If no region found having demand in 1-degree search, keep on increasing degree of search till the best location is found</li>
+    </ol>
   </li>
 </ol>
 
@@ -511,7 +504,7 @@ Fig : Funding in AI based startups taken from CB Insights article</p>
       </a>
     </h1>
 
-    <time datetime="2018-01-05T00:00:00+05:30" class="post-date">05 Jan 2018</time>
+    <time datetime="2018-01-05T00:00:00+00:00" class="post-date">05 Jan 2018</time>
 
     Have you been ever stuck while the neural network executes smoothly across epochs but the loss doesn't decrease ? Or may be the loss decreases but not the way you would like it to ? Debugging a deep neural network is helpful if not essential for a lot of use cases.
 
@@ -528,7 +521,7 @@ Fig : Funding in AI based startups taken from CB Insights article</p>
       </a>
     </h1>
 
-    <time datetime="2017-01-25T00:00:00+05:30" class="post-date">25 Jan 2017</time>
+    <time datetime="2017-01-25T00:00:00+00:00" class="post-date">25 Jan 2017</time>
 
     Deep Learning has been making quite a lot of progress in computer vision tasks of late. In this post, I go on to explain how to use 2D U Net (one of the most popular papers of 2015-16 in computer vision) for segmenting out overlapping chromosomes on a slide used for cytogenetics.
 
@@ -545,7 +538,7 @@ Fig : Funding in AI based startups taken from CB Insights article</p>
       </a>
     </h1>
 
-    <time datetime="2016-12-10T00:00:00+05:30" class="post-date">10 Dec 2016</time>
+    <time datetime="2016-12-10T00:00:00+00:00" class="post-date">10 Dec 2016</time>
 
     In most of the cab rides I had my conversation with the cab owner tending towards to the ever-so-important question - “How to generate maximum revenue?” Do I drive at night? Where do I start my trip? What do I optimize for – longer rides in a longer time or repeated shorter rides in the same time? How long do I drive? and alike questions. This post tries to solve some of those questions along with bringing out some interesting insights about traffic in NYC.
 
@@ -562,7 +555,7 @@ Fig : Funding in AI based startups taken from CB Insights article</p>
       </a>
     </h1>
 
-    <time datetime="2016-09-17T00:00:00+05:30" class="post-date">17 Sep 2016</time>
+    <time datetime="2016-09-17T00:00:00+00:00" class="post-date">17 Sep 2016</time>
 
     Of late, we have heard a lot of talk about unsupervised learning being the way forward. A lot of research at major R&D organisations like Open AI is focussed on unsupervised learning.Why is unsupervised learning so important ?
 
@@ -579,7 +572,7 @@ Fig : Funding in AI based startups taken from CB Insights article</p>
       </a>
     </h1>
 
-    <time datetime="2016-09-05T00:00:00+05:30" class="post-date">05 Sep 2016</time>
+    <time datetime="2016-09-05T00:00:00+00:00" class="post-date">05 Sep 2016</time>
 
     Any heated argument on AI these days soon ends up in a predictable trajectory - so DeepMind's AlphaGo beats Go champ,Tesla to compete with Uber using AI driven cars, ethical dilemma of driver-less cars and finally - would robots overpower humankind
 
@@ -605,7 +598,7 @@ Fig : Funding in AI based startups taken from CB Insights article</p>
 
       <footer class="footer">
         <small>
-          All content copyright to <a href="mailto:rohitghosh177@gmail.com">Rohit Ghosh </a>&copy; <time datetime="2020-08-23T19:38:19+05:30">2020</time>. All rights reserved.
+          All content copyright to <a href="mailto:rohitghosh177@gmail.com">Rohit Ghosh </a>&copy; <time datetime="2024-02-21T02:03:36+00:00">2024</time>. All rights reserved.
         </small>
       </footer>
     </div>

@@ -4,11 +4,20 @@ title: About
 ---
 
 ![placeholder](/images/LinkedIn_photo.jpg)
-Rohit here. Currently, working as <strong>Deep Learning Scientist</strong> at [qure.ai](https://blog.qure.ai). We are working on medical imaging problems using Deep Learning in Computer Vision for early-stage diagnosis.
+Rohit here. Currently, working as <strong>Founding Member & Chief Commercial Officer</strong> at [Qure.ai](https://qure.ai). Qure.ai focuses on AI for medical imaging and is currently being used in 50+ countries, 2000+ provider sites globally. Within Qure, I am currently responsible for business development and strategy for existing business verticals. My learnings are primarily around entering new segments for a B2B business and scalign them. I will try and consolidate my learnings on this blog. Ironaically, this is what I have been doing day-in day-out for since 2018. 
 
-A 2014 graduate from IIT Bombay, I had worked as Risk Analyst with Nomura right after graduation. I completed my CFA Level I in the same year while working at Nomura. Before my current role with Qure, I had worked as Data Scientist for [ListUp](http://listup.co.in/), a P2P buy-sell platform and as Freelance Data Scientist for New York based startup [Data Science Labs](https://datascilabs.com/) and couple of other startups.
+I have also done a [TEDX talk](https://www.youtube.com/watch?v=rUq3VabF93w) in the meantime talking about the journey of Qure and the problem we're trying to solve. Also, in the intervenign years, I got a chance to mentor and coach 200+ students as a faculty at GreyAtom. In collaboration with GreyAtom, we put out a series of [YouTube lectures](https://www.youtube.com/watch?v=qYRC9o9jyT8&list=PLLkSL3qYv6EK3kS98sqNAqSZsMqc8AhhV) on machine learning and AI which could help anyone get started with data science. 
 
-I focus mostly on R&D areas in computer vision part of Deep Learning. In addition to vision, I also keenly follow developments in reinforcement learning (mostly related to trading strategies). Also, on weekends, I am mostly playing either playing tennis or at swimming pool. An avid Hindi music buff, I like to read on varied topics, and keep a tab on the newest breakthroughs. Hence, a varied lot of topics in the [blog](https://rohitghosh.github.io/).
+From 2019-2021, I worked with Google Developer Expert Group for machine learning to mentor/coach budding data scientists across the globe to learn data science. Have travelled to 20+ conferences as part of the role to meet and give talks about interesting aspects of explainability of machine learning. 
+
+As teaching machine learning very close to my heart, I also happened to co-author a book titled [Big Data Analytics: Systems, Algorithms, Applications](https://books.google.com.au/books?id=tJm2DwAAQBAJ&source=gbs_navlinks_s) along with Prof. Prabhu and his student (_it was a lot of effort writing even few chapters!_)
+
+A 2014 graduate from IIT Bombay, I had worked Nomura right after graduation.  Before Qure, I had worked as Data Scientist for [ListUp](http://listup.co.in/), a P2P buy-sell platform and as Freelance Data Scientist for New York based startup [Data Science Labs](https://datascilabs.com/) and couple of other startups.
+
+Early on in Qure I used to mostly on R&D areas in computer vision part of Deep Learning. In addition to vision, I also keenly follow developments in reinforcement learning (mostly related to trading strategies). Also, on weekends, I am mostly playing either playing tennis or at swimming pool. An avid Hindi music buff, I like to read on varied topics, and keep a tab on the newest breakthroughs. Hence, a varied lot of topics in the [blog](https://rohitghosh.github.io/).
+
+#### Patents
+1. Patent on **Application of deep learning for medical imaging evaluation** [Link for the patent](https://patents.google.com/patent/US10504227B1/)
 
 
 #### Publications
