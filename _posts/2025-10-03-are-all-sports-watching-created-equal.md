@@ -1,6 +1,6 @@
 ---
 layout: post
-title:Are All Sports (Watching) Created Equal ?
+title: Are All Sports (Watching) Created Equal ?
 comments: true
 excerpt: People have different **likings** for different sports—a lot of it depends on upbringing and surroundings. If you live in the desert, chances are your liking for ice hockey might be lower than for field hockey. But beyond your favourites and childhood familiarities, as an unbiased user are we predisposed to liking certain sports more than others just because of the sport itself?
 ---
