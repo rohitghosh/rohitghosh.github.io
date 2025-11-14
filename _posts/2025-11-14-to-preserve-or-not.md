@@ -1,3 +1,10 @@
+---
+layout: post
+title: To Preserve Or Not To Preserve
+comments: true
+excerpt: Of late, my wife has started to put these nice, handwritten notes on my lunch boxes that I really enjoy and adore. But a new challenge has come up with that: the dilemma of whether to throw them away or preserve them for eternity. Deep dive to see if and why we preserve things or not preserve things ..
+---
+
 # To Preserve Or Not To Preserve
 
 Of late, my wife has started to put these nice, handwritten notes on my lunch boxes that I really enjoy and adore. But a new challenge has come up with that: the dilemma of whether to throw them away or preserve them for eternity.
