@@ -7,8 +7,7 @@ title: About
 Rohit here. Having fun in general through life, mostly. 
 
 
-Previously was <strong>Founding Member</strong> at [Qure.ai](https://qure.ai) doing all the fun things from 0-1 (building the algos as AI researcher till 2018) and then 1-100 (commercialise tech as CCO till 2024, doing 0-1 across multiple market verticals). Qure.ai focuses on AI for medical imaging and is currently being used in 80+ countries, 2000+ provider sites globally ~as of 2024. The two phases couldn't have been more similar and yet so different. Doing zero to one, every other days couldn't have been more fun! 
-
+Previously was <strong>Founding Member</strong> at [Qure.ai](https://qure.ai) doing all the fun things from 0-1 (building the algos as AI researcher till 2018) and then 1-100 (commercialise tech as CCO till 2024, doing 0-1 across multiple market verticals). Qure.ai focuses on AI for medical imaging and is currently being used in 80+ countries, 2000+ provider sites globally ~as of 2024. The two phases couldn't have been more similar and yet so different. Getting to do zero to one every day - couldn't have thanked my stars for being able to live that life! Looking to do again :)
 
 I have also done a bunch of 'fun' things in the process till now
 
