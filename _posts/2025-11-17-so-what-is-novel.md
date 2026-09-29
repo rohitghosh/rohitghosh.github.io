@@ -5,8 +5,6 @@ comments: true
 excerpt: "We throw around the phrase **novel idea** a lot, especially in tech and research. But what is novelty really, and how do you even begin to measure it?"
 ---
 
-# So Did You Come Up With A Novel Idea?
-
 I think I have come across this wordplay quite a bit of late: this is a "novel idea" or "can AI create a novel thesis"? Two things come to mind when I hear this. First is the obsession we have with novel ideas, especially among founders and researchers. Second is: what is even a novel idea, how do you define it?
 
 In 3, 2, 1... I dive down the second rabbit hole.
