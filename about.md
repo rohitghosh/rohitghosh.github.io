@@ -11,7 +11,7 @@ Previously was <strong>Founding Member</strong> at [Qure.ai](https://qure.ai) do
 
 I have also done a bunch of 'fun' things in the process till now
 
-- Got to learn sales, started by selling frugally (_spamming, you say?_) and then be able to build a full fledged first principles based sales process to launch from 0 to $XX M+ ARR in 2-3 years; across 5 market vertials (_learning to lead commercial teams along the way - they work very differently from AI reasearch teams, haha!_)
+- Got to learn sales, started by selling frugally (_spamming, you say?_) and then be able to build a full fledged first principles based sales process to launch from 0 to $35 M+ ARR in 4 years; across 5 market vertials (_learning to lead commercial teams along the way - they work very differently from AI reasearch teams, haha!_)
 
 
 - [TEDX talk](https://www.youtube.com/watch?v=rUq3VabF93w) in the problem we're trying to solve the meantime talking about the journey of Qure  
