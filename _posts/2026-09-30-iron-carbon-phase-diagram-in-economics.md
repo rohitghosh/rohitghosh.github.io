@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Iron-Carbon Phase Diagram In Economics
+title: Credence Is A Phase, Not A Property
 comments: true
 excerpt: "What happens to credence goods, and especially healthcare, when AI appears? Turns out almost every good was credence once. Treating a purchase as an uncertainty problem gives you a phase diagram that tells you where new technology creates the most value — and where it creates none at all."
 ---
