@@ -13,7 +13,7 @@ So before that, for folks who don't understand credence goods (skip to the next 
 
 In 2011-12, three researchers (Janet Currie, Wanchuan Lin and Juanjuan Meng) trained 20 students to act as patients and sent them to doctors at 80 hospitals in a large Chinese city. Every "patient" presented the same case: a mild flu-like history, the kind antibiotics don't help. They also asked the doctor for antibiotics, in two different versions: in one version they said they would buy the drugs at a drugstore themselves, and in the other they didn't mention where the drugs would be filled. When the physician knew nothing about where it would be filled, they assumed a hospital purchase and prescribed an antibiotic 85% of the times, vs 14% of the times when they knew the patient would fill it elsewhere. For identical symptoms and the same request.
 
-So, why does this happen? The textbook explains these phenomena by sorting goods into 3 categories: search, experience and credence goods. George Stigler made the cost of searching for information an economic problem in its own right. Philip Nelson later separated search goods, whose important qualities you can inspect before buying, from experience goods, whose qualities you discover by using them. Michael Darby and Edi Karni added a third category in 1973: credence qualities - things that remain difficult or costly to evaluate even after consumption. Surgery was an obvious example. So was automobile repair. Over time, "credence good" has acquired a slightly mystical meaning: something whose quality the buyer simply cannot know.
+So, why does this happen? The textbook explains these phenomena by sorting goods into 3 categories: search, experience and credence goods. George Stigler was the first who positioned the cost of searching for information as an economic problem. Philip Nelson later separated search goods (important qualities one can inspect before buying), from experience goods (qualities one discovers by using these goods). Michael Darby and Edi Karni added a third category in 1973: credence qualities - things that remain difficult or costly to evaluate even after consumption. Surgery was an obvious example. So was automobile repair. Over time, "credence good" has acquired a slightly mystical meaning: something whose quality the buyer simply cannot know.
 
 That is too strong. And the core issue with most explanations, LLM generated or otherwise (at least it was for me), is that they treat the entire thing as a discrete category rather than a spectrum.
 
@@ -35,7 +35,7 @@ So now if you plot these 3 variables (ignoring Pearson's spurious correlation) i
 
 *Figure 1. Each axis says how many times the stakes cover a cost. The further right, the cheaper it is to check yourself. The further up, the cheaper it is to ask someone.*
 
-Of the four quadrants, the bottom-left square is what you would call "go blind" goods: both checking and asking cost more than what's at stake, so nobody bothers finding out. The top-left is what you would call credence goods: asking someone is cheaper than checking yourself. The bottom-right is what you would call search goods: checking yourself is cheapest. The top-right is where both are cheap compared to the stakes, and the diagonal decides - above it people ask, below it they check themselves. Experience goods sit high up on the asking side: trusting the seller is cheap, because you'll find out after and won't come back if they lied.
+Of the four quadrants, the bottom-left square is what you would call "go blind" goods: both checking and asking cost more than what's at stake, so nobody bothers finding out. The top-left is what you would call credence goods: asking someone is cheaper than checking yourself. The bottom-right is what you would call search goods: checking yourself is cheapest. The top-right is where the diagonal decides - above it ask is cheaper and below the line it's easier for them to check themselves. Experience goods sit high up on the credence side of the graph: trusting the seller is cheap, because you'll find out after and won't come back if they lied. As you can see it's just a special case of credence good per se that way. 
 
 This is why I call it a phase diagram. Metallurgists use the iron-carbon phase diagram to tell which form steel takes at a given carbon content and temperature. Heat the same steel and it changes phase. Purchases work the same way. A good is not credence or search by nature. It sits in a phase for its current V, C and T, and when those change, the same good changes phase.
 
@@ -57,9 +57,9 @@ The reason is simple: a buyer goes ahead only when what they gain from the purch
 
 **A. Only changes in the bottom-most line create disruptions.** An innovation in lowering C wouldn't move transaction volume if the stake is low and V is still the bottom line. Lines above the bottom can move all they want. The one exception is the second line: if whoever sells the cheapest route can set its price, they charge just under the next cheapest route, so the second line sets the price.
 
-**B. The biggest jumps come when a new line drops below the old bottom line.** That is a phase change: buyers who were not buying at all show up. Lowering a line that is already the bottom helps too, but less. When online bookstores made obscure books findable, the value of that extra variety to buyers was 7 to 10 times the value of the lower prices (Brynjolfsson, Hu and Smith, 2003).
+**B. The biggest jumps come when a new line drops below the old bottom line.** This would look like a phase change: buyers who were not buying at all show up. Lowering a line that is already the bottom helps too, but less. When online bookstores made obscure books findable, the value of that extra variety to buyers was 7 to 10 times the value of the lower prices (Brynjolfsson, Hu and Smith, 2003).
 
-**C. Getting bigger helps only where T is the bottom line.** A brand is trust you check once and use for every purchase, so a bigger, better-known name lowers T. That is where consolidation under one brand makes sense: highway motel chains, or the Big Four auditors. Where C is the bottom line, the seller's size doesn't lower anything for the buyer. Consolidation then happens among whoever does the checking: three credit bureaus, a couple of big booking sites.
+**C. Getting bigger helps only where T is the bottom line.** A brand is trust product, so a bigger, better-known name lowers T. This helps where T is already the bottom line or that it's a credence good. Those are scenarios where consolidation under one brand makes sense: highway motel chains, or the Big Four auditors. Where C is the bottom line, the seller's size doesn't lower anything for the buyer. Consolidation then happens among whoever can do the checking: three credit bureaus, a couple of big booking sites.
 
 **D. Whoever pays the advisor decides the bias.** If the advisor also sells the fix, or is paid by the seller, T hides a cost the buyer can't see. That is the opening story: same doctors, same symptoms, and the prescription changed with who sold the drug. So owning both the advice and the sale (vertical integration) pays for the firm only while C stays above T. Once checking gets cheap, or a rule separates the two, it stops paying. Competition doesn't fix this either. It lowers the advisor's fee, and when the fee hits zero, the advisor gets paid by the seller instead: free comparison sites paid per click, zero-commission brokers paid by the firms that fill their orders.
 
@@ -95,18 +95,18 @@ Before 1984, you trusted the brand and your doctor that a pill worked. You could
 
 ### The usual story
 
-Put the stories together and most goods follow the same path: T first (someone you trust), then C (you check yourself once tools arrive), then V (options become the same and nobody needs to check). Some skip a step: generics went straight from asking to going blind. Some get stuck: a surgeon's judgment in the operating room can't be turned into a tool. Some go back: car maintenance moved from doing it yourself back to trusting a mechanic once cars became computers.
+For almost any new product or service, there's usually a similar trajectory in terms of what's the cheapest option: T first (someone you trust), then C (you check yourself once tools arrive), then V (options become the same and nobody needs to check). Some skip a step: generics went straight from asking to going blind. Some get stuck: a surgeon's judgment in the operating room can't be turned into a tool. Some go back: car maintenance moved from doing it yourself back to trusting a mechanic once cars became computers.
 
 Which way a good moves depends on four questions:
 
-1. Can the fact be turned into a standard reading that a tool can produce? Then C falls.
+1. Can the fact (to reduce uncertainty) be turned into a standard reading that a tool can produce? Then C falls.
 2. Can advisors compete, and are they paid separately from the answer? Then T falls.
 3. Can sellers charge different buyers differently, or are the options different by nature? Then V stays high, and people keep checking or asking.
 4. Can a standard, a warranty or a redesign make the options the same? Then V falls, and people stop checking.
 
 ## So what happens to healthcare when AI appears?
 
-The internet mostly lowered C for facts that are the same for everyone: prices, listings, reviews. AI mostly lowers T for facts about you: your lab result, your symptoms, your bill. Where T lands decides what happens.
+The internet mostly lowered C for facts that are the same for everyone: prices, listings, reviews. AI mostly lowers T for facts about you: your lab result, your symptoms, your bill. It also makes an expert cheaply available to anyone, so T also lowers for things that seemed to expensive so far. Where T lands decides what happens.
 
 ![Figure 4: Four places AI can lower T](/images/iron_carbon_economics/fig4-ai-four-cases.svg){: style="margin:auto; display:block;"}
 
@@ -117,6 +117,6 @@ The internet mostly lowered C for facts that are the same for everyone: prices, 
 3. **Where T was already the bottom** - people who already paid a doctor get cheaper advice. Money moves from doctors to patients, and licensing slows it down.
 4. **Still above the bottom line** - nothing happens (corollary A).
 
-And healthcare is not one good. A doctor's visit bundles several facts, and each sits in its own phase. Renewing a stable prescription is already just numbers, so T drops and it moves first - Utah is already piloting AI that renews routine prescriptions. Reading your own lab results or images moves toward C. The hands-on exam is stuck, since no tool reads it. And whether a treatment worked compared with the alternative can only be answered by trials, so it moves only when institutions move.
+And healthcare is not one good. A doctor's visit bundles several facts, and each sits in its own phase. Renewing a stable prescription is already just numbers, so T drops and it moves first - Utah is already piloting AI that renews routine prescriptions. Reading your own lab results or images moves toward C. The hands-on exam is stuck, since no tool reads it. And whether a treatment worked compared with the alternative can only be answered by trials or wearables, so it moves only when institutions move. And this is just the surface of the iceberg!
 
-So healthcare doesn't get de-credenced as a whole. Each fact in it changes phase on its own.
+
