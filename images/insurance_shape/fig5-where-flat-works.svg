@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" width="680" height="360" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="680" height="360" fill="#ffffff"/>
+  <rect x="40" y="30" width="190" height="160" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <rect x="40" y="30" width="190" height="50" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="135" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">No clinician</text>
+  <text x="135" y="70" text-anchor="middle" font-size="11" fill="#444444">marginal cost is ~zero</text>
+  <text x="135" y="104" text-anchor="middle" font-size="12" fill="#000000">Meditation apps</text>
+  <text x="135" y="123" text-anchor="middle" font-size="12" fill="#000000">Wearables</text>
+  <text x="135" y="142" text-anchor="middle" font-size="12" fill="#000000">Health records</text>
+  <rect x="245" y="30" width="190" height="160" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <rect x="245" y="30" width="190" height="50" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="340" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">You can check the result</text>
+  <text x="340" y="70" text-anchor="middle" font-size="11" fill="#444444">the outcome is visible</text>
+  <text x="340" y="104" text-anchor="middle" font-size="12" fill="#000000">Diabetes clinics:</text>
+  <text x="340" y="123" text-anchor="middle" font-size="12" fill="#000000">blood sugar is a number</text>
+  <text x="340" y="142" text-anchor="middle" font-size="12" fill="#000000">Orthodontics:</text>
+  <text x="340" y="161" text-anchor="middle" font-size="12" fill="#000000">the result is in the mirror</text>
+  <rect x="450" y="30" width="190" height="160" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <rect x="450" y="30" width="190" height="50" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="545" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">The quantity is fixed</text>
+  <text x="545" y="70" text-anchor="middle" font-size="11" fill="#444444">a bundle, not a pool</text>
+  <text x="545" y="104" text-anchor="middle" font-size="12" fill="#000000">Dental plans:</text>
+  <text x="545" y="123" text-anchor="middle" font-size="12" fill="#000000">two cleanings a year</text>
+  <text x="545" y="142" text-anchor="middle" font-size="12" fill="#000000">Check-up packages</text>
+  <text x="545" y="161" text-anchor="middle" font-size="12" fill="#000000">Fixed-price surgery</text>
+  <text x="40" y="232" font-size="13" font-weight="bold" fill="#000000">One knee replacement, before and after you know you need it</text>
+  <line x1="60" y1="290" x2="300" y2="290" stroke="#000000" stroke-width="2" stroke-dasharray="8 5"/>
+  <line x1="300" y1="290" x2="620" y2="290" stroke="#000000" stroke-width="4"/>
+  <circle cx="300" cy="290" r="7" fill="#ffffff" stroke="#000000" stroke-width="1.6"/>
+  <text x="300" y="274" text-anchor="middle" font-size="12" fill="#000000">the trigger: you need surgery</text>
+  <text x="180" y="320" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">Whether you'll need one</text>
+  <text x="180" y="338" text-anchor="middle" font-size="12" fill="#000000">the hospital won't carry this risk</text>
+  <text x="460" y="320" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">How complicated it gets</text>
+  <text x="460" y="338" text-anchor="middle" font-size="12" fill="#000000">the hospital carries this: fixed-price package</text>
+</svg>

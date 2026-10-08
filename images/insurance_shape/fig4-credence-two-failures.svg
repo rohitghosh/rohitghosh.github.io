@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 362" width="680" height="362" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000000"/></marker></defs>
+  <rect x="0" y="0" width="680" height="362" fill="#ffffff"/>
+  <text x="315.0" y="46" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Paid per visit</text>
+  <text x="535.0" y="46" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Paid a flat fee</text>
+  <text x="40" y="85" font-size="12" fill="#000000">The doctor earns</text>
+  <text x="40" y="101" font-size="12" fill="#000000">more by</text>
+  <rect x="210" y="60" width="210" height="58" fill="#ffffff" stroke="#000000" stroke-width="1.6"/>
+  <rect x="430" y="60" width="210" height="58" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="315.0" y="94" text-anchor="middle" font-size="13" fill="#000000">doing more</text>
+  <text x="535.0" y="94" text-anchor="middle" font-size="13" fill="#000000">doing less</text>
+  <text x="40" y="153" font-size="12" fill="#000000">If it goes wrong,</text>
+  <text x="40" y="169" font-size="12" fill="#000000">the patient gets</text>
+  <rect x="210" y="128" width="210" height="58" fill="#ffffff" stroke="#000000" stroke-width="1.6"/>
+  <rect x="430" y="128" width="210" height="58" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="315.0" y="162" text-anchor="middle" font-size="13" fill="#000000">too much care</text>
+  <text x="535.0" y="162" text-anchor="middle" font-size="13" fill="#000000">too little care</text>
+  <text x="40" y="221" font-size="12" fill="#000000">What the patient</text>
+  <text x="40" y="237" font-size="12" fill="#000000">sees</text>
+  <rect x="210" y="196" width="210" height="58" fill="#ffffff" stroke="#000000" stroke-width="1.6"/>
+  <rect x="430" y="196" width="210" height="58" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="315.0" y="221" text-anchor="middle" font-size="13" fill="#000000">visible, and it</text>
+  <text x="315.0" y="238" text-anchor="middle" font-size="13" fill="#000000">feels like care</text>
+  <text x="535.0" y="221" text-anchor="middle" font-size="13" fill="#000000">invisible, it looks like</text>
+  <text x="535.0" y="238" text-anchor="middle" font-size="13" fill="#000000">good judgement</text>
+  <line x1="315.0" y1="264" x2="315.0" y2="294" stroke="#000000" stroke-width="1.6" marker-end="url(#ah)"/>
+  <rect x="130" y="298" width="370" height="52" fill="#cccccc" stroke="#000000" stroke-width="1.6"/>
+  <text x="315" y="320" text-anchor="middle" font-size="13" fill="#000000">The patient can't check, so picks</text>
+  <text x="315" y="338" text-anchor="middle" font-size="13" fill="#000000">the failure they can see: the meter</text>
+</svg>

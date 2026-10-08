@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 452" width="680" height="452" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="680" height="452" fill="#ffffff"/>
+  <text x="80" y="52" font-size="13" fill="#000000">Cost of one episode (illustrative)</text>
+  <line x1="80" y1="66" x2="80" y2="330" stroke="#000000" stroke-width="1"/>
+  <line x1="80" y1="330" x2="620" y2="330" stroke="#000000" stroke-width="1"/>
+  <rect x="110" y="316" width="56" height="14" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="138" y="348" text-anchor="middle" font-size="12" fill="#000000">GP visit</text>
+  <rect x="194" y="308" width="56" height="22" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="222" y="348" text-anchor="middle" font-size="12" fill="#000000">Blood</text>
+  <text x="222" y="363" text-anchor="middle" font-size="12" fill="#000000">test</text>
+  <rect x="278" y="270" width="56" height="60" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="306" y="348" text-anchor="middle" font-size="12" fill="#000000">MRI</text>
+  <text x="306" y="363" text-anchor="middle" font-size="12" fill="#000000">scan</text>
+  <rect x="362" y="212" width="56" height="118" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="390" y="348" text-anchor="middle" font-size="12" fill="#000000">Minor</text>
+  <text x="390" y="363" text-anchor="middle" font-size="12" fill="#000000">surgery</text>
+  <rect x="446" y="125" width="56" height="205" fill="#cccccc" stroke="#000000" stroke-width="1"/>
+  <text x="474" y="348" text-anchor="middle" font-size="12" fill="#000000">Knee</text>
+  <text x="474" y="363" text-anchor="middle" font-size="12" fill="#000000">replacement</text>
+  <rect x="530" y="82" width="56" height="248" fill="#cccccc" stroke="#000000" stroke-width="1"/>
+  <text x="558" y="348" text-anchor="middle" font-size="12" fill="#000000">Heart</text>
+  <text x="558" y="363" text-anchor="middle" font-size="12" fill="#000000">surgery</text>
+  <line x1="80" y1="180" x2="620" y2="180" stroke="#000000" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="86" y="172" font-size="12" fill="#000000">What the household can pay</text>
+  <text x="40" y="396" font-size="12" fill="#000000">White bars sit below the line: paid per visit, out of pocket.</text>
+  <text x="40" y="414" font-size="12" fill="#000000">Grey bars sit above it: an employer or a government holds the pool, or it becomes</text>
+  <text x="40" y="432" font-size="12" fill="#000000">debt, or the care doesn't happen.</text>
+</svg>

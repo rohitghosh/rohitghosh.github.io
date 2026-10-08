@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="680" height="480" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000000"/></marker></defs>
+  <rect x="0" y="0" width="680" height="480" fill="#ffffff"/>
+  <rect x="40" y="30" width="340" height="44" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="210" y="57" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">1. Buyers want the next use to be free</text>
+  <line x1="210" y1="74" x2="210" y2="106" stroke="#000000" stroke-width="1.6" marker-end="url(#ah)"/>
+  <rect x="40" y="110" width="340" height="56" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="210" y="133" text-anchor="middle" font-size="13" fill="#000000">2. Does one more use cost the seller little,</text>
+  <text x="210" y="152" text-anchor="middle" font-size="13" fill="#000000">and is usage capped (no hoarding, no resale)?</text>
+  <line x1="380" y1="138" x2="436" y2="138" stroke="#000000" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="408" y="130" text-anchor="middle" font-size="12" fill="#000000">No</text>
+  <rect x="440" y="110" width="200" height="56" fill="#ffffff" stroke="#000000" stroke-width="1.6"/>
+  <text x="540" y="133" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Meter it</text>
+  <text x="540" y="152" text-anchor="middle" font-size="12" fill="#000000">toothpaste, fuel</text>
+  <line x1="210" y1="166" x2="210" y2="202" stroke="#000000" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="218" y="189" font-size="12" fill="#000000">Yes</text>
+  <rect x="40" y="206" width="340" height="56" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  <text x="210" y="229" text-anchor="middle" font-size="13" fill="#000000">3. Is the meter invisible (nobody hesitates)</text>
+  <text x="210" y="248" text-anchor="middle" font-size="13" fill="#000000">and does the value of each use vary a lot?</text>
+  <line x1="380" y1="234" x2="436" y2="234" stroke="#000000" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="408" y="226" text-anchor="middle" font-size="12" fill="#000000">Yes</text>
+  <rect x="440" y="206" width="200" height="56" fill="#ffffff" stroke="#000000" stroke-width="1.6"/>
+  <text x="540" y="229" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Meter it anyway</text>
+  <text x="540" y="248" text-anchor="middle" font-size="12" fill="#000000">Visa, electricity, API calls</text>
+  <line x1="210" y1="262" x2="210" y2="298" stroke="#000000" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="218" y="285" font-size="12" fill="#000000">No</text>
+  <rect x="40" y="302" width="340" height="56" fill="#cccccc" stroke="#000000" stroke-width="1.6"/>
+  <text x="210" y="325" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Next use free: subscription</text>
+  <text x="210" y="344" text-anchor="middle" font-size="12" fill="#000000">Netflix, gym, an AI chat app</text>
+  <line x1="40" y1="386" x2="640" y2="386" stroke="#999999" stroke-width="1"/>
+  <rect x="40" y="404" width="600" height="56" fill="#eeeeee" stroke="#000000" stroke-width="1"/>
+  <text x="340" y="427" text-anchor="middle" font-size="13" fill="#000000">4. Is capacity kept aside for one buyer, used or not? Then add a fixed</text>
+  <text x="340" y="446" text-anchor="middle" font-size="13" fill="#000000">charge per month on top of either outcome: rent, a consultant on retainer.</text>
+</svg>

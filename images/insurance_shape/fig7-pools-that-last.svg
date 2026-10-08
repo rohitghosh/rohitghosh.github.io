@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" width="680" height="450" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="680" height="450" fill="#ffffff"/>
+  <rect x="385" y="40" width="255" height="170" fill="#eeeeee" stroke="none" stroke-width="1"/>
+  <rect x="130" y="210" width="255" height="170" fill="#cccccc" stroke="none" stroke-width="1"/>
+  <rect x="130" y="40" width="510" height="340" fill="none" stroke="#000000" stroke-width="1"/>
+  <line x1="385" y1="40" x2="385" y2="380" stroke="#000000" stroke-width="1"/>
+  <line x1="130" y1="210" x2="640" y2="210" stroke="#000000" stroke-width="1"/>
+  <text x="512.5" y="102" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Pools that last</text>
+  <text x="512.5" y="121" text-anchor="middle" font-size="12" fill="#000000">Kaiser, Germany's sickness funds,</text>
+  <text x="512.5" y="139" text-anchor="middle" font-size="12" fill="#000000">Brazil's employer plans,</text>
+  <text x="512.5" y="157" text-anchor="middle" font-size="12" fill="#000000">Australian and UK public health</text>
+  <text x="257.5" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Adverse selection</text>
+  <text x="257.5" y="129" text-anchor="middle" font-size="12" fill="#000000">Individually sold insurance</text>
+  <text x="257.5" y="147" text-anchor="middle" font-size="12" fill="#000000">Bright Health, Friday Health</text>
+  <text x="512.5" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">Owns the risk, not the care</text>
+  <text x="512.5" y="299" text-anchor="middle" font-size="12" fill="#000000">US hospital-owned plans:</text>
+  <text x="512.5" y="317" text-anchor="middle" font-size="12" fill="#000000">members go out of network</text>
+  <text x="257.5" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">No pool at all</text>
+  <text x="257.5" y="299" text-anchor="middle" font-size="12" fill="#000000">Pay per visit, save, borrow</text>
+  <text x="257.5" y="317" text-anchor="middle" font-size="12" fill="#000000">for the big stuff</text>
+  <text x="257.5" y="402" text-anchor="middle" font-size="12" fill="#000000">the patient</text>
+  <text x="512.5" y="402" text-anchor="middle" font-size="12" fill="#000000">someone else</text>
+  <text x="385.0" y="430" text-anchor="middle" font-size="13" fill="#000000">Who decides who is in the pool?</text>
+  <text x="110" y="125.0" text-anchor="middle" font-size="12" fill="#000000" transform="rotate(-90 110 125.0)">someone else</text>
+  <text x="110" y="295.0" text-anchor="middle" font-size="12" fill="#000000" transform="rotate(-90 110 295.0)">the patient</text>
+  <text x="70" y="210.0" text-anchor="middle" font-size="13" fill="#000000" transform="rotate(-90 70 210.0)">Who decides how much care is supplied?</text>
+</svg>
